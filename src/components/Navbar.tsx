@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
@@ -9,26 +12,34 @@ const Navbar = () => {
         <div className="flex gap-8 justify-end w-fit">
           <a>About</a>
           <a>Tracks</a>
-          <a>Faq</a>
+          <a>FAQ</a>
           <a>Sponsors</a>
           <a>Team</a>
         </div>
       </div>
 
-      <div className="h-[75vh] flex justify-center flex-col pl-10">
+      <div className="h-[90vh] flex justify-center flex-col pl-[10rem]">
         <div className="pb-4">
           <p className="text-8xl">BitHacks</p>
           <p className="text-xl pl-1">UCI's first embedded hackathon</p>
         </div>
         <div className="gap-3.5 flex">
-          <button className="bg-violet-500 px-4 py-1.5 w-fit">Hacker</button>
-          <button className="border-violet-500 border-2 border-solid px-4 py-1.5 w-fit">
+          <motion.button
+            whileHover={{ scale: 1.2, backgroundColor: "#724CF1" }}
+            className="bg-violet-500 px-4 py-1.5 w-fit"
+          >
+            Hacker
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.2, borderColor: "#724CF1" }}
+            className="border-violet-500 border-2 border-solid px-4 py-1.5 w-fit"
+          >
             Mentor
-          </button>
+          </motion.button>
         </div>
       </div>
 
-      <div className="h-[75vh] bg-violet-500 flex items-center">
+      <div className="h-[65vh] bg-violet-500 flex items-center">
         <p className="text-5xl text-right pr-[10rem] pl-[40rem] py-[4rem]">
           BitHacks is the when you biggest and new. This is the all time
           electrical and embedded hackathon. Be there or be square.
@@ -42,7 +53,7 @@ const Navbar = () => {
         right-0 flex"
       ></div>
 
-      <div className="pl-[10rem] h-[75vh] flex flex-col justify-center">
+      <div className="pl-[10rem] h-[60vh] flex flex-col justify-center">
         <div>
           <p className="">Date | Location</p>
           <p className="text-5xl">36 Hours</p>
