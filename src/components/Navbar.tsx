@@ -21,27 +21,34 @@ const Navbar = () => {
           <p className="text-xl pl-1">UCI's first embedded hackathon</p>
         </div>
         <div className="gap-3.5 flex">
-          <button className="bg-violet-900 px-2 py-1.5 w-fit">Hacker</button>
-          <button className="border-violet-900 border-2 border-solid px-2 py-1.5 w-fit">
+          <button className="bg-violet-500 px-2 py-1.5 w-fit">Hacker</button>
+          <button className="border-violet-500 border-2 border-solid px-2 py-1.5 w-fit">
             Mentor
           </button>
         </div>
       </div>
 
-      {/* <div className="h-[75vh] bg-violet-900 flex items-center">
-        <p className="text-5xl text-right pl-[46rem] pr-[10rem]">
+      <div className="h-[75vh] bg-violet-500 flex items-center">
+        <p className="text-5xl text-right pr-[10rem] pl-[40rem] py-[4rem]">
           BitHacks is the when you biggest and new. This is the all time
           electrical and embedded hackathon. Be there or be square.
         </p>
-      </div> */}
+      </div>
+      <div
+        className="w-0 h-0 
+        border-l-[98.95vw] border-l-transparent
+        border-t-[75px] border-t-violet-500
+        border-r-[0] border-r-transparent
+        right-0 flex"
+      ></div>
 
       <div className="pl-[10rem] h-[75vh] flex flex-col justify-center">
         <div>
-          <p>Date | Location</p>
+          <p className="">Date | Location</p>
           <p className="text-5xl">36 Hours</p>
           <p className="text-5xl pb-4">$60,000+ Prizes</p>
         </div>
-        <button className="bg-violet-900 px-2 py-1.5 w-fit">Sponsor</button>
+        <button className="bg-violet-500 px-2 py-1.5 w-fit">Sponsor</button>
       </div>
     </>
   );
