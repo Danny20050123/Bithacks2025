@@ -7,16 +7,18 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <>
-      <div className="flex justify-between items-center px-10 py-6">
-        <Image src="globe.svg" width={36} height={36} alt={"BitHacks Logo"} />
+      <nav id="home" className="flex justify-between items-center px-10 py-6">
+        <a href="#home">
+          <Image src="globe.svg" width={36} height={36} alt={"BitHacks Logo"} />
+        </a>
         <div className="flex gap-8 justify-end w-fit">
-          <a>About</a>
-          <a>Tracks</a>
-          <a>FAQ</a>
-          <a>Sponsors</a>
-          <a>Team</a>
+          <a href="#about">About</a>
+          <a href="#tracks">Tracks</a>
+          <a href="#faq">FAQ</a>
+          <a href="#sponsors">Sponsors</a>
+          <a href="#team">Team</a>
         </div>
-      </div>
+      </nav>
 
       <div className="h-[90vh] flex justify-center flex-col pl-[10rem]">
         <div className="pb-4">
@@ -31,7 +33,11 @@ const Navbar = () => {
             Hacker
           </motion.button>
           <motion.button
-            whileHover={{ scale: 1.2, borderColor: "#724CF1" }}
+            whileHover={{
+              scale: 1.2,
+              borderColor: "#724CF1",
+              backgroundColor: "#724CF1",
+            }}
             className="border-violet-500 border-2 border-solid px-4 py-1.5 w-fit"
           >
             Mentor
@@ -39,7 +45,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="h-[65vh] bg-violet-500 flex items-center">
+      <div id="about" className="h-[65vh] bg-violet-500 flex items-center">
         <p className="text-5xl text-right pr-[10rem] pl-[40rem] py-[4rem]">
           BitHacks is the when you biggest and new. This is the all time
           electrical and embedded hackathon. Be there or be square.
