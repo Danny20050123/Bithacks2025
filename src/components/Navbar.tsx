@@ -21,8 +21,8 @@ const Navbar = () => {
           <p className="text-xl pl-1">UCI's first embedded hackathon</p>
         </div>
         <div className="gap-3.5 flex">
-          <button className="bg-violet-500 px-2 py-1.5 w-fit">Hacker</button>
-          <button className="border-violet-500 border-2 border-solid px-2 py-1.5 w-fit">
+          <button className="bg-violet-500 px-4 py-1.5 w-fit">Hacker</button>
+          <button className="border-violet-500 border-2 border-solid px-4 py-1.5 w-fit">
             Mentor
           </button>
         </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
           <p className="text-5xl">36 Hours</p>
           <p className="text-5xl pb-4">$60,000+ Prizes</p>
         </div>
-        <button className="bg-violet-500 px-2 py-1.5 w-fit">Sponsor</button>
+        <button className="bg-violet-500 px-4 py-1.5 w-fit">Sponsor</button>
       </div>
     </>
   );
