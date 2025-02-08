@@ -8,9 +8,16 @@ const Navbar = () => {
   return (
     <>
       <nav id="home" className="flex justify-between items-center px-10 py-6">
-        <a href="#home">
-          <Image src="globe.svg" width={36} height={36} alt={"BitHacks Logo"} />
-        </a>
+        <motion.div whileHover={{ scale: 1.2 }}>
+          <a href="#home">
+            <Image
+              src="globe.svg"
+              width={36}
+              height={36}
+              alt={"BitHacks Logo"}
+            />
+          </a>
+        </motion.div>
         <div className="flex gap-8 justify-end w-fit">
           <a href="#about">About</a>
           <a href="#tracks">Tracks</a>
@@ -45,19 +52,21 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div id="about" className="h-[65vh] bg-violet-500 flex items-center">
-        <p className="text-5xl text-right pr-[10rem] pl-[40rem] py-[4rem]">
-          BitHacks is the when you biggest and new. This is the all time
-          electrical and embedded hackathon. Be there or be square.
-        </p>
-      </div>
-      <div
-        className="w-0 h-0 
-        border-l-[98.95vw] border-l-transparent
+      <div className="relative">
+        <div id="about" className="h-[65vh] bg-violet-500 flex items-center">
+          <p className="text-5xl text-right pr-[10rem] pl-[40rem] py-[4rem]">
+            BitHacks is the when you biggest and new. This is the all time
+            electrical and embedded hackathon. Be there or be square.
+          </p>
+        </div>
+        <div
+          className="w-0 h-0 
+        border-l-[98vw] border-l-transparent
         border-t-[75px] border-t-violet-500
         border-r-[0] border-r-transparent
-        right-0 flex"
-      ></div>
+        right-0 flex absolute"
+        ></div>
+      </div>
 
       <div className="pl-[10rem] h-[60vh] flex flex-col justify-center">
         <div>
