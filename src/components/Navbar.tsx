@@ -16,10 +16,8 @@ const Navbar = () => {
     <>
       <div id="home" className="relative">
         <nav className="flex justify-between items-center px-10 py-6">
-          {/* <nav className="flex justify-between items-center px-10 py-6"> */}
-          {/* <motion.div whileHover={{ scale: 1.2 }}> */}
           <a href="#home">
-            <motion.div whileTap={{ scale: 0.9 }}>
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
               <Image
                 src="globe.svg"
                 width={36}
