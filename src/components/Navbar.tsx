@@ -29,6 +29,7 @@ const Navbar = () => {
             </motion.div>
           </a>
           <motion.div
+            className="md:hidden"
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               setNavbarOpen(!navbarOpen);
@@ -42,14 +43,13 @@ const Navbar = () => {
               alt={"three line menu"}
             />
           </motion.div>
-          {/* </motion.div> */}
-          {/* <div className="flex gap-8 justify-end w-fit">
+          <div className="md:flex md:gap-8 md:justify-end md:w-fit max-md:hidden">
             <a href="#about">About</a>
             <a href="#tracks">Tracks</a>
             <a href="#faq">FAQ</a>
             <a href="#sponsors">Sponsors</a>
             <a href="#team">Team</a>
-          </div> */}
+          </div>
         </nav>
         <div>
           <AnimatePresence>
@@ -63,7 +63,7 @@ const Navbar = () => {
                   ease: bezier,
                   type: "spring",
                 }}
-                className="absolute right-10"
+                className="absolute right-10 md:hidden"
               >
                 <ul className="bg-purple-700 flex flex-col text-right px-8 py-4 w-fit gap-8">
                   <a href="#about">About</a>
