@@ -9,7 +9,7 @@ const Landing = () => {
       <div className="h-[90vh] w-fit flex justify-center flex-col pl-[10rem]">
         <div className="pb-4">
           <p className="text-8xl">BitHacks</p>
-          <p className="text-xl pl-1">UCI's first embedded hackathon</p>
+          <p className="text-xl pl-1">UCI's first embedded systems hackathon</p>
         </div>
         <div className="gap-3.5 flex">
           <motion.button
