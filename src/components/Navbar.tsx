@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, cubicBezier, AnimatePresence } from "framer-motion";
+import { motion, cubicBezier, AnimatePresence } from "motion/react";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
