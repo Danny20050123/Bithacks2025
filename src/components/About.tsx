@@ -6,15 +6,17 @@ const About = () => {
   return (
     <>
       <div className="relative">
-        <div
+        {/* <div
           id="about"
           className="lg:h-[65vh] md:h-[45vh] h-[20vh] bg-violet-500 flex items-center"
-        >
-          <p className="md:text-5xl text-[2vw] text-right pl-[50vw] right-[10rem] lg:leading-[48px] md:leading-[3vw] leading-[2vw] absolute">
+        > */}
+        <div id="about" className="h-[65vh] bg-violet-500 flex items-center">
+          {/* <p className="md:text-5xl text-[2vw] text-right pl-[50vw] right-[10rem] lg:leading-[48px] md:leading-[3vw] leading-[2vw] absolute"> */}
+          <p className="md:text-5xl text-[1.5rem] text-right px-10 md:pl-[50vw] md:right-[10rem] lg:leading-[48px] md:leading-[3vw] absolute">
             As UCI's first embedded systems hackathon, BitHacks is focused on
-            providing a space for students to build, create, explore, and grow.
-            BitHacks aims to foster creativity and push your imagination to its
-            limits.
+            providing a space for students to <b>create</b>, <b>explore</b>, and{" "}
+            <b>grow</b>. BitHacks aims to foster creativity and{" "}
+            <b>push your imagination beyond its limits</b>.
           </p>
         </div>
         <div
@@ -26,7 +28,7 @@ const About = () => {
         ></div>
       </div>
 
-      <div className="pl-[10rem] h-[60vh] w-fit flex flex-col justify-center">
+      <div className="pl-10 md:pl-[10rem] h-[60vh] w-fit flex flex-col justify-center">
         <div>
           <p className="">April 4-6 • Location</p>
           <p className="text-5xl">36 Hours</p>
@@ -34,7 +36,8 @@ const About = () => {
         </div>
         <motion.button
           whileHover={{ scale: 1.2, backgroundColor: "#724CF1" }}
-          className="bg-violet-500 px-4 py-1.5 w-fit"
+          whileTap={{ scale: 0.9, backgroundColor: "#724CF1" }}
+          className="bg-violet-500 text-xl py-2 px-24 md:text-sm md:px-4 md:py-1.5 w-fit"
         >
           Sponsor
         </motion.button>
