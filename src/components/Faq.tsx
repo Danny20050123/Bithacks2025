@@ -8,15 +8,15 @@ const Faq = () => {
   const faqData = [
     {
       question: "What is BitHacks?",
-      answer: "A hackathon is a coding event where participants collaborate to create innovative solutions within a limited time frame."
+      answer: "BitHacks is an event where participants collaborate and compete to create the most innovative embedded projects within a weekend."
     },
     {
       question: "Who can participate in BitHacks?",
-      answer: "Any student enrolled in a college or university can participate in our hackathon."
+      answer: "Any college student can apply to participate in BitHacks."
     },
     {
       question: "Do I need to know how to code or work with embedded software?",
-      answer: "While coding experience is helpful, we welcome beginners and provide mentors to help you learn."
+      answer: "No coding experience is needed, we welcome beginners and provide mentors to help you learn."
     },
     {
       question: "When do applications close? When will decisions come out?",
@@ -24,7 +24,7 @@ const Faq = () => {
     },
     {
       question: "What should I bring?",
-      answer: "Bring your laptop, charger, any form of ID, and any personal items you'll need for the duration of the event."
+      answer: "Bring your laptop, charger, a form of ID, and any personal items you'll need for the duration of the event."
     },
     {
       question: "What is the schedule like?",
@@ -41,14 +41,14 @@ const Faq = () => {
   ];
 
   const sponsorData = [
-    { name: "Amazon", link: "https://amazon.com", imageUrl: "/api/placeholder/150/150"},
-    { name: "Google", link: "https://google.com", imageUrl: "/api/placeholder/150/150" },
-    { name: "Test3", link: "https://test3.com", imageUrl: "/api/placeholder/150/150" },
-    { name: "Test4", link: "https://test4.com", imageUrl: "/api/placeholder/150/150" },
-    { name: "Test5", link: "https://test5.com", imageUrl: "/api/placeholder/150/150" },
-    { name: "Test6", link: "https://test6.com", imageUrl: "/api/placeholder/150/150" },
-    { name: "Test7", link: "https://test7.com", imageUrl: "/api/placeholder/150/150" },
-    { name: "Test8", link: "https://test8.com", imageUrl: "/api/placeholder/150/150" }
+    { name: "UCI ODIT", link: "https://odit.uci.edu", imageUrl: "/ODITLogoTransparent.png"},
+    { name: "UCI OAI", link: "https://oai.tech.uci.edu", imageUrl: "/inclusion-oai.png" },
+    { name: "Medtronic", link: "https://www.medtronic.com/", imageUrl: "/medtronic-3.svg" },
+    { name: "Northrop Grumman", link: "https://www.northropgrumman.com/", imageUrl: "/NorthropGrumman.svg" }
+    // { name: "Test5", link: "https://test5.com", imageUrl: "/api/placeholder/150/150" },
+    // { name: "Test6", link: "https://test6.com", imageUrl: "/api/placeholder/150/150" },
+    // { name: "Test7", link: "https://test7.com", imageUrl: "/api/placeholder/150/150" },
+    // { name: "Test8", link: "https://test8.com", imageUrl: "/api/placeholder/150/150" }
   ];
 
   const toggleFaq = (index: number) => {
@@ -72,9 +72,9 @@ const Faq = () => {
                 onClick={() => toggleFaq(index)} // title of faqs
                 className="bg-[#d1d1d1] p-4 rounded-lg flex justify-between items-center w-full text-black"
               >
-                <span className="font-medium">{faq.question}</span>
+                <span className="font-medium text-left pr-4 whitespace-normal">{faq.question}</span>
                 <ChevronDown
-                  className={`transform transition-transform duration-200 text-black ${
+                  className={`transform transition-transform duration-200 text-black flex-shrink-0 ${
                     openFaqs.includes(index) ? 'rotate-180' : ''
                   }`}
                 />
@@ -118,7 +118,7 @@ const Faq = () => {
               className="aspect-square bg-white rounded-lg shadow-md p-4 relative group overflow-hidden"
             >
               <img
-                src="/api/placeholder/150/150"
+                src={sponsor.imageUrl}
                 alt={`${sponsor.name} logo`}
                 className="w-full h-full object-contain"
               />
