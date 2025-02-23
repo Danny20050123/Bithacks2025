@@ -18,7 +18,7 @@ const Landing = () => {
           <motion.button
             whileHover={{ scale: 1.2, backgroundColor: "#724CF1" }}
             whileTap={{ scale: 0.9 }}
-            className="bg-violet-500 text-xl md:text-sm py-2 px-24 md:px-4 md:py-1.5 w-fit"
+            className="bg-violet-500 rounded-full text-xl md:text-sm py-2 px-24 md:px-4 md:py-1.5 w-fit"
           >
             Hacker
           </motion.button>
@@ -29,7 +29,7 @@ const Landing = () => {
               backgroundColor: "#724CF1",
             }}
             whileTap={{ scale: 0.9, backgroundColor: "#724CF1" }}
-            className="border-violet-500 border-2 border-solid text-xl py-2 px-24 md:text-sm md:px-4 md:py-1.5 w-fit"
+            className="border-violet-500 rounded-full border-2 border-solid text-xl py-2 px-24 md:text-sm md:px-4 md:py-1.5 w-fit"
           >
             Mentor
           </motion.button>
