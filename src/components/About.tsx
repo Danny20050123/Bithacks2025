@@ -10,9 +10,12 @@ const About = () => {
           id="about"
           className="lg:h-[65vh] md:h-[45vh] h-[20vh] bg-violet-500 flex items-center"
         > */}
-        <div id="about" className="h-[65vh] bg-violet-500 flex items-center">
+        <div
+          id="about"
+          className="h-[65vh] md:h-[68vh] bg-violet-500 flex items-center"
+        >
           {/* <p className="md:text-5xl text-[2vw] text-right pl-[50vw] right-[10rem] lg:leading-[48px] md:leading-[3vw] leading-[2vw] absolute"> */}
-          <p className="text-[1.5rem] md:text-4xl md:leading-[3rem] md:pr-10 lg:pl-[48vw] md:pl-[20vw] pt-8 text-right max-md:px-10 absolute">
+          <p className="text-[1.5rem] md:text-4xl md:leading-[3rem] md:pr-[10rem] lg:pl-[44vw] md:pl-[20vw] pt-8 text-right max-md:px-10 absolute">
             As UCI's first embedded systems hackathon, BitHacks is focused on
             providing a space for students to <b>create</b>, <b>explore</b>, and{" "}
             <b>grow</b>. BitHacks aims to foster creativity and{" "}
