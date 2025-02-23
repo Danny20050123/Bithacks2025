@@ -61,9 +61,9 @@ const Navbar = () => {
                   ease: bezier,
                   type: "spring",
                 }}
-                className="absolute right-10 md:hidden"
+                className="absolute top-12 right-10 md:hidden"
               >
-                <ul className="bg-purple-700 flex flex-col text-right px-8 py-4 w-fit gap-8">
+                <ul className="bg-purple-700 drop-shadow-lg rounded-lg flex flex-col text-right px-8 py-4 w-fit gap-8">
                   <a href="#about">About</a>
                   <a href="#tracks">Tracks</a>
                   <a href="#faq">FAQ</a>
