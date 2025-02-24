@@ -53,14 +53,14 @@ const Cards = () => {
       </div>
 
 
-      <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit, minmax(250px,250px))]">
+      <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,250px))]">
         {filteredMembers.map((member, index) => (
-          <div key={index} className="max-w-250px w-full">
+          <div key={index} className="max-w-[250px] w-full">
             <div className="relative group rounded-lg overflow-hidden h-80">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
                 style={{
-                  backgroundImage: `url(${member.image}`,
+                  backgroundImage: `url(${member.image})`,
                 }}
               ></div>
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300"></div>
@@ -85,7 +85,7 @@ const Cards = () => {
 const Team = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl md: text-4xl font-bold text-left mb-8 text-white text-center">Our Team</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-left mb-8 text-white text-center">Our Team</h1>
       <Cards />
     </div>
   );
