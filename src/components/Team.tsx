@@ -39,8 +39,8 @@ const Cards = () => {
   );
  
   return (
-    <div>
-      <div className="flex gap-2 mb-8">
+    <div className="px-4">
+      <div className="flex flex-wrap gap-2 mb-8 justify-center">
         {['View All', 'Logistics', 'Corporate', 'Tech', 'Other'].map((option) => (
           <button
             key={option}
@@ -53,9 +53,9 @@ const Cards = () => {
       </div>
 
 
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit, minmax(250px,250px))]">
         {filteredMembers.map((member, index) => (
-          <div key={index} className="w-60">
+          <div key={index} className="max-w-250px w-full">
             <div className="relative group rounded-lg overflow-hidden h-80">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
@@ -85,7 +85,7 @@ const Cards = () => {
 const Team = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-left mb-8 text-white">Our Team</h1>
+      <h1 className="text-3xl md: text-4xl font-bold text-left mb-8 text-white text-center">Our Team</h1>
       <Cards />
     </div>
   );
