@@ -84,7 +84,7 @@ const Cards = () => {
 
 const Team = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8" id="team">
       <h1 className="text-3xl md:text-4xl font-bold text-left mb-8 text-white text-center">Our Team</h1>
       <Cards />
     </div>
