@@ -44,10 +44,10 @@ const Faq = () => {
     { name: "UCI ODIT", link: "https://odit.uci.edu", imageUrl: "/ODITLogoTransparent.png"},
     { name: "UCI OAI", link: "https://oai.tech.uci.edu", imageUrl: "/inclusion-oai.png" },
     { name: "Medtronic", link: "https://www.medtronic.com/", imageUrl: "/medtronic-3.svg" },
-    { name: "Northrop Grumman", link: "https://www.northropgrumman.com/", imageUrl: "/NorthropGrumman.svg" }
-    // { name: "Test5", link: "https://test5.com", imageUrl: "/api/placeholder/150/150" },
-    // { name: "Test6", link: "https://test6.com", imageUrl: "/api/placeholder/150/150" },
-    // { name: "Test7", link: "https://test7.com", imageUrl: "/api/placeholder/150/150" },
+    { name: "Northrop Grumman", link: "https://www.northropgrumman.com/", imageUrl: "/NorthropGrumman.svg" },
+    { name: "UCI MECPS", link: "https://mecps.uci.edu/", imageUrl: "/MECPS.png" },
+    { name: "UCI Samueli School of Engineering", link: "https://engineering.uci.edu/", imageUrl: "/samueli.png" },
+    { name: "IEEE-Eta Kappa Nu", link: "https://hkn.ieee.org/", imageUrl: "/IEEE-EKN.png" }
     // { name: "Test8", link: "https://test8.com", imageUrl: "/api/placeholder/150/150" }
   ];
 
@@ -87,7 +87,7 @@ const Faq = () => {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <div className="bg-[#f5f5f5] p-4 rounded-b-lg mt-1 text-black">
+                  <div className="bg-[#f5f5f5] p-4 rounded-b-lg mt-1 text-black min-h-[100px] lg:min-h-[80px]">
                     {faq.answer}
                   </div>
                 </div>
