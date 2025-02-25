@@ -1,13 +1,11 @@
 "use client";
 
-
-import React, { useState } from 'react';
-import CardComponent from './Card';
-
+import React, { useState } from "react";
+import CardComponent from "./Card";
 
 const Tracks = () => {
   return (
-    <div className="flex bg-[#43345d] min-h-[800px] rounded-[15px]">
+    <div className="flex justify-center bg-[#43345d] min-h-[800px] rounded-[15px]">
       {/* <p>Tracks area</p> */}
       <div className="grid gap-5 p-5">
         <CardComponent title="hi" content="there" />
@@ -24,6 +22,5 @@ const Tracks = () => {
     </div>
   );
 };
-
 
 export default Tracks;
