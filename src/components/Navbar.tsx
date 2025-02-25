@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       <div id="home" className="relative">
-        <nav className="flex justify-between items-center px-10 py-6">
+        <nav className="flex fixed w-[100vw] bg-black justify-between z-10 items-center px-10 py-6">
           <a href="#home">
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
               <Image
@@ -61,9 +61,9 @@ const Navbar = () => {
                   ease: bezier,
                   type: "spring",
                 }}
-                className="absolute top-12 right-10 md:hidden"
+                className="fixed z-10 top-20 right-10 md:hidden"
               >
-                <ul className="bg-purple-700 drop-shadow-lg rounded-lg flex flex-col text-right px-8 py-4 w-fit gap-8">
+                <ul className="z-10 bg-purple-700 drop-shadow-lg rounded-lg flex flex-col text-right px-8 py-4 w-fit gap-8">
                   <a href="#about">About</a>
                   <a href="#tracks">Tracks</a>
                   <a href="#faq">FAQ</a>
