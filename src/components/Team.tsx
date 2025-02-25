@@ -45,17 +45,17 @@ const Cards = () => {
           <button
             key={option}
             onClick={() => setFilter(option)}
-            className="px-4 py-2 text-white rounded bg-cover bg-center transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 hover:bg-opacity-50"
-          >
+            className="w-28 px-4 py-2 text-white rounded-full bg-violet-500 transition-transform duration-300 transform hover:scale-105 hover:bg-violet-600"
+            >
             {option}
           </button>
         ))}
       </div>
 
 
-      <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,250px))]">
+      <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,auto))]">
         {filteredMembers.map((member, index) => (
-          <div key={index} className="max-w-[250px] w-full">
+          <div key={index} className="w-full md:max-w-[250px] mx-auto">
             <div className="relative group rounded-lg overflow-hidden h-80">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
