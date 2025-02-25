@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       <div id="home" className="relative">
-        <nav className="flex fixed w-[100vw] bg-black justify-between z-10 items-center px-10 py-6">
+        <nav className="flex fixed w-[100vw] backdrop-blur-sm bg-black/65 justify-between z-10 items-center px-10 py-6">
           <a href="#home">
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
               <Image
