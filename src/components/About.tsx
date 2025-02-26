@@ -1,20 +1,47 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "motion/react";
+import TypeIt from "typeit";
 
 const About = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const target = document.getElementById("prizes");
+
+      if (!target) return;
+      new TypeIt("#prizes", {
+        speed: 30,
+        waitUntilVisible: true,
+        loop: true,
+      })
+        .type("$1000+ in Prizes")
+        .pause(1000)
+        .delete(20)
+        .pause(1000)
+        .type("Prizes include: Monitors")
+        .pause(1000)
+        .delete(8)
+        .pause(1000)
+        .type("Kisses from Danny")
+        .pause(1000)
+        .delete(17)
+        .pause(1000)
+        .type("Free IEEE position")
+        .pause(1000)
+        .delete(18)
+        .pause(1000)
+        .go();
+    }
+  }, []);
+
   return (
     <>
       <div className="relative">
-        {/* <div
-          id="about"
-          className="lg:h-[65vh] md:h-[45vh] h-[20vh] bg-violet-500 flex items-center"
-        > */}
         <div
           id="about"
           className="h-[65vh] md:h-[68vh] bg-violet-500 flex items-center"
         >
-          {/* <p className="md:text-5xl text-[2vw] text-right pl-[50vw] right-[10rem] lg:leading-[48px] md:leading-[3vw] leading-[2vw] absolute"> */}
           <p className="text-[1.5rem] md:text-4xl md:leading-[3rem] md:pr-[10rem] lg:pl-[44vw] md:pl-[20vw] pt-8 text-right max-md:px-10 absolute">
             As UCI's first embedded systems hackathon, BitHacks is focused on
             providing a space for students to <b>create</b>, <b>explore</b>, and{" "}
@@ -35,7 +62,7 @@ const About = () => {
         <div>
           <p className="">April 4-6 • Location</p>
           <p className="text-4xl md:text-5xl">36 Hours</p>
-          <p className="text-4xl md:text-5xl pb-4">$500+ Prizes</p>
+          <p id="prizes" className="text-4xl md:text-5xl pb-4"></p>
         </div>
         <motion.button
           whileHover={{ scale: 1.2, backgroundColor: "#724CF1" }}
