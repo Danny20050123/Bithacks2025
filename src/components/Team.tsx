@@ -18,19 +18,16 @@ const Cards = () => {
 
 
   const teamMembers: Member[] = [
-    { name: 'First Last', position: 'Logistics Manager', image: defaultImageLink, category: 'Logistics', linkedin: 'https://linkedin.com' },
-    { name: 'First Middle Last', position: 'Tech Lead', image: defaultImageLink, category: 'Tech', linkedin: 'https://linkedin.com' },
-    { name: 'First Last', position: 'Web Developer', image: defaultImageLink, category: 'Tech', linkedin: 'https://linkedin.com' },
-    { name: 'First M. Last', position: 'Corporate Member', image: defaultImageLink, category: 'Corporate', linkedin: 'https://linkedin.com' },
-    { name: 'First L.', position: 'Other', image: defaultImageLink, category: 'Other', linkedin: 'https://linkedin.com' },
-    { name: 'First Last', position: 'Logistics Member', image: defaultImageLink, category: 'Logistics', linkedin: 'https://linkedin.com' },
-    { name: '-', position: 'Corporate Lead', image: defaultImageLink, category: 'Corporate', linkedin: 'https://linkedin.com' },
+    { name: 'Donovan Chen', position: 'Outreach Lead', image: defaultImageLink, category: 'Outreach', linkedin: 'https://www.linkedin.com/in/donovanachen/' },
+    { name: 'Daniel Li', position: 'Tech Lead', image: defaultImageLink, category: 'Tech', linkedin: 'https://www.linkedin.com/in/ningyuan-li/' },
+    { name: 'German Cervantes', position: 'Workshop and Logistics Committee', image: defaultImageLink, category: 'Tech', linkedin: 'https://www.LinkedIn.com/in/germancerv/' },
+    { name: 'Jonathan Lin', position: 'Workshop Committee', image: defaultImageLink, category: 'Tech', linkedin: 'https://www.linkedin.com/in/linjonathan001/' },
+    { name: 'Wilson Nguyen', position: 'Director', image: defaultImageLink, category: 'Other', linkedin: 'https://www.linkedin.com/in/wilsonng17/' },
+    { name: 'Vanessa Shimizu', position: 'Outreach and Graphics Committee', image: defaultImageLink, category: 'Outreach', linkedin: 'https://www.linkedin.com/in/vanessa-shimizu-/' },
   ];
-
 
   const [filter, setFilter] = useState<string>('View All');
   const filteredMembers = filter === 'View All' ? teamMembers : teamMembers.filter((member) => member.category === filter);
-
 
   const LinkIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -41,7 +38,7 @@ const Cards = () => {
   return (
     <div className="px-4">
       <div className="flex flex-wrap gap-2 mb-8 justify-center">
-        {['View All', 'Logistics', 'Corporate', 'Tech', 'Other'].map((option) => (
+        {['View All', 'Logistics', 'Outreach', 'Tech', 'Other'].map((option) => (
           <button
             key={option}
             onClick={() => setFilter(option)}
@@ -51,7 +48,6 @@ const Cards = () => {
           </button>
         ))}
       </div>
-
 
       <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,auto))]">
         {filteredMembers.map((member, index) => (
@@ -71,7 +67,7 @@ const Cards = () => {
               </div>
             </div>
             <div className="mt-4 text-center">
-              <h3 className="text-xl font-semibold text-white">{member.name}</h3>
+              <h3 className="text-xl font-semibold text-gray-400">{member.name}</h3>
               <p className="text-gray-300">{member.position}</p>
             </div>
           </div>
@@ -81,11 +77,10 @@ const Cards = () => {
   );
 };
 
-
 const Team = () => {
   return (
     <div className="container mx-auto px-4 py-8" id="team">
-      <h1 className="text-3xl md:text-4xl font-bold text-left mb-8 text-white text-center">Our Team</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-left mb-8 text-gray-400 text-center">Our Team</h1>
       <Cards />
     </div>
   );
