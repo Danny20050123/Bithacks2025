@@ -38,10 +38,7 @@ const About = () => {
   return (
     <>
       <div className="relative">
-        <div
-          id="about"
-          className="h-[65vh] md:h-[68vh] bg-violet-500 flex items-center"
-        >
+        <div className="h-[65vh] md:h-[68vh] bg-violet-500 flex items-center">
           <p className="text-[1.5rem] md:text-4xl md:leading-[3rem] md:pr-[10rem] lg:pl-[44vw] md:pl-[20vw] pt-8 text-right max-md:px-10 absolute">
             As UCI's first embedded systems hackathon, BitHacks is focused on
             providing a space for students to <b>create</b>, <b>explore</b>, and{" "}
@@ -50,6 +47,7 @@ const About = () => {
           </p>
         </div>
         <div
+          id="about"
           className="w-0 h-0 
         border-l-[98vw] border-l-transparent
         border-t-[75px] border-t-violet-500
