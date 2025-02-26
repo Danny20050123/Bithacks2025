@@ -8,7 +8,7 @@ type Member = {
   name: string;
   position: string;
   image: string;
-  category: string;
+  category: string | string[];
   linkedin: string;
 };
 
@@ -16,18 +16,21 @@ type Member = {
 const Cards = () => {
   const defaultImageLink: string = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1200px-Unknown_person.jpg';
 
-
   const teamMembers: Member[] = [
+    { name: 'Wilson Nguyen', position: 'Director', image: defaultImageLink, category: 'Other', linkedin: 'https://www.linkedin.com/in/wilsonng17/' },
     { name: 'Donovan Chen', position: 'Outreach Lead', image: defaultImageLink, category: 'Outreach', linkedin: 'https://www.linkedin.com/in/donovanachen/' },
     { name: 'Daniel Li', position: 'Tech Lead', image: defaultImageLink, category: 'Tech', linkedin: 'https://www.linkedin.com/in/ningyuan-li/' },
-    { name: 'German Cervantes', position: 'Workshop and Logistics Committee', image: defaultImageLink, category: 'Tech', linkedin: 'https://www.LinkedIn.com/in/germancerv/' },
+    { name: 'German Cervantes', position: 'Workshop and Logistics Committee', image: defaultImageLink, category: ['Tech', 'Logistics'], linkedin: 'https://www.LinkedIn.com/in/germancerv/' },
     { name: 'Jonathan Lin', position: 'Workshop Committee', image: defaultImageLink, category: 'Tech', linkedin: 'https://www.linkedin.com/in/linjonathan001/' },
-    { name: 'Wilson Nguyen', position: 'Director', image: defaultImageLink, category: 'Other', linkedin: 'https://www.linkedin.com/in/wilsonng17/' },
     { name: 'Vanessa Shimizu', position: 'Outreach and Graphics Committee', image: defaultImageLink, category: 'Outreach', linkedin: 'https://www.linkedin.com/in/vanessa-shimizu-/' },
   ];
 
-  const [filter, setFilter] = useState<string>('View All');
-  const filteredMembers = filter === 'View All' ? teamMembers : teamMembers.filter((member) => member.category === filter);
+  const [filter, setFilter] = useState<string>('Directors/Leads');
+  const filteredMembers = (filter === 'Directors/Leads' ? 
+  teamMembers.filter((member => member.position.includes('Lead') || member.position.includes('Director'))) : 
+  teamMembers.filter(member => (Array.isArray(member.category) ? 
+  member.category.includes(filter) : 
+  member.category === filter)));
 
   const LinkIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -38,11 +41,11 @@ const Cards = () => {
   return (
     <div className="px-4">
       <div className="flex flex-wrap gap-2 mb-8 justify-center">
-        {['View All', 'Logistics', 'Outreach', 'Tech', 'Other'].map((option) => (
+        {['Directors/Leads', 'Logistics', 'Outreach', 'Tech'].map((option) => (
           <button
             key={option}
             onClick={() => setFilter(option)}
-            className="w-28 px-4 py-2 text-white rounded-full bg-violet-500 transition-transform duration-300 transform hover:scale-105 hover:bg-violet-600"
+            className="w-36 px-4 py-2 text-white rounded-full bg-violet-500 transition-transform duration-300 transform hover:scale-105 hover:bg-violet-600"
             >
             {option}
           </button>
