@@ -1,53 +1,82 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three-stdlib";
 
 export default function ThreeScene() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const pivotRef = useRef<THREE.Object3D | null>(null);
+
   useEffect(() => {
-    const container = document.getElementById("three-container");
+    if (!containerRef.current) return;
+
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x111111);
 
-    const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(25, 25, 100);
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    const camera = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 1000);
+    camera.position.set(0, 50, 150);
 
-    scene.background = new THREE.Color(0x1f2937);
-
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(1000, 500);
-    container.appendChild(renderer.domElement);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth * 0.98, window.innerHeight);
+    renderer.setClearColor(0x000000, 0);
+    containerRef.current.appendChild(renderer.domElement);
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 1);
     scene.add(ambientLight);
-
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(5, 5, 5);
     scene.add(directionalLight);
 
+    const pivot = new THREE.Object3D();
+    scene.add(pivot);
+    pivotRef.current = pivot;
+
     const loader = new GLTFLoader();
     loader.load("/arduino.glb", (gltf) => {
       const model = gltf.scene;
-      model.scale.set(1, 1, 1);
-      scene.add(model);
-      animate();
+      model.scale.set(0.75, 0.75, 0.75);
+
+      const box = new THREE.Box3().setFromObject(model);
+      const center = new THREE.Vector3();
+      box.getCenter(center);
+
+      // ✅ Center model relative to itself
+      model.position.set(-center.x, -center.y, -center.z);
+      model.rotateX(0.7)
+      // ✅ Move entire pivot (Model moves with it)
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+      pivot.position.set(screenWidth * 0.04, screenHeight * 0.1, 0);
+
+      pivot.add(model);
     });
 
     function animate() {
       requestAnimationFrame(animate);
+
+      if (pivotRef.current) {
+        pivotRef.current.rotation.y += 0.01;
+      }
+
       renderer.render(scene, camera);
     }
 
-    function onWindowResize() {
+    animate();
+
+    function onResize() {
+      renderer.setSize(window.innerWidth, window.innerHeight);
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
     }
-    window.addEventListener("resize", onWindowResize);
+    window.addEventListener("resize", onResize);
 
     return () => {
-      window.removeEventListener("resize", onWindowResize);
-      container.removeChild(renderer.domElement);
+      window.removeEventListener("resize", onResize);
+      if (containerRef.current) {
+        containerRef.current.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
-  return <div id="three-container" />;
+  return <div ref={containerRef} className="absolute inset-0 -z-10" />;
 }
