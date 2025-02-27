@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-
+import Model from "./model"
 const Landing = () => {
   return (
     <>
@@ -35,6 +35,7 @@ const Landing = () => {
           </motion.button>
         </div>
       </div>
+      <Model/>
     </>
   );
 };
