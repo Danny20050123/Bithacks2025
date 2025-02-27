@@ -1,13 +1,27 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three-stdlib";
 
 export default function ThreeScene() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const pivotRef = useRef<THREE.Object3D | null>(null);
+  const [isLargeScreen, setIsLargeScreen] = useState(false); // ✅ Default to false for SSR safety
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth > 768);
+    };
+
+    if (typeof window !== "undefined") {
+      checkScreenSize();
+      window.addEventListener("resize", checkScreenSize);
+    }
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    if (!isLargeScreen || !containerRef.current) return;
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x111111);
@@ -40,13 +54,12 @@ export default function ThreeScene() {
       const center = new THREE.Vector3();
       box.getCenter(center);
 
-      // ✅ Center model relative to itself
       model.position.set(-center.x, -center.y, -center.z);
-      model.rotateX(0.7)
-      // ✅ Move entire pivot (Model moves with it)
+      model.rotateX(0.7);
+
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      pivot.position.set(screenWidth * 0.04, screenHeight * 0.1, 0);
+      pivot.position.set(screenWidth * 0.035, screenHeight * 0.1, 0);
 
       pivot.add(model);
     });
@@ -76,7 +89,9 @@ export default function ThreeScene() {
         containerRef.current.removeChild(renderer.domElement);
       }
     };
-  }, []);
+  }, [isLargeScreen]); // ✅ Ensures Three.js only runs when screen size is large
 
-  return <div ref={containerRef} className="absolute inset-0 -z-10" />;
+  return isLargeScreen ? (
+    <div ref={containerRef} className="md:absolute inset-0 -z-10" />
+  ) : null; // ✅ Returns `null` for small screens instead of conditionally running hooks
 }
