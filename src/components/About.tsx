@@ -40,7 +40,7 @@ const About = () => {
       <div className="relative">
         <div className="h-[65vh] md:h-[68vh] bg-violet-500 flex items-center">
           <p className="text-[1.5rem] md:text-4xl md:leading-[3rem] md:pr-[10rem] lg:pl-[44vw] md:pl-[20vw] pt-8 text-right max-md:px-10 absolute">
-            As UCI's first embedded systems hackathon, BitHacks is focused on
+            As UCI's first Embedded Systems hackathon, BitHacks is focused on
             providing a space for students to <b>create</b>, <b>explore</b>, and{" "}
             <b>grow</b>. BitHacks aims to foster creativity and{" "}
             <b>push your imagination beyond its limits</b>.
@@ -62,13 +62,13 @@ const About = () => {
           <p className="text-4xl md:text-5xl">36 Hours</p>
           <p id="prizes" className="text-4xl md:text-5xl pb-4"></p>
         </div>
-        <motion.button
+        {/* <motion.button
           whileHover={{ scale: 1.2, backgroundColor: "#724CF1" }}
           whileTap={{ scale: 0.9, backgroundColor: "#724CF1" }}
           className="bg-violet-500 rounded-full text-xl py-2 px-24 md:text-sm md:px-4 md:py-1.5 w-fit"
         >
           Sponsor
-        </motion.button>
+        </motion.button> */}
       </div>
     </>
   );
