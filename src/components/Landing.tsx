@@ -5,7 +5,7 @@ import Model from "./model"
 const Landing = () => {
   return (
     <>
-      <div className="m-auto h-[60vh] md:h-[90vh] pl-[10rem] md:m-0 w-fit flex justify-center flex-col">
+<div className="m-auto h-[60vh] md:h-[90vh] md:pl-[10rem] md:m-0 w-fit flex justify-center flex-col">
         <div className="pb-4">
           <p className="text-center text-7xl md:text-left md:text-8xl">
             BitHacks
@@ -34,7 +34,9 @@ const Landing = () => {
             Mentor
           </motion.button>
         </div>
-        <Model/>
+        <div className="h-0, w-0 md: ">
+          <Model/>
+        </div>
       </div>
       
     </>
