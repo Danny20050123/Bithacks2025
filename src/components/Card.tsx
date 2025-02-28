@@ -16,7 +16,7 @@ const CardComponent: React.FC<CardProps> = ({ title, content }) => {
             alt="Decorative content"
           />
         </div>
-        <div className="relative h-[500px] top-[-140px] text-[#111] text-center opacity-0 transition-[2s] duration-[ease-in-out] py-2.5 hover:opacity-100 mt-[30px]">
+        <div className="relative h-[700px] top-[-240px] text-[#111] justify-center text-center opacity-0 transition-[2s] duration-[ease-in-out] py-2.5 hover:opacity-100 mt-[30px]">
           <h1 className="text-[30px]">{title}</h1>
           <p className="text-[15px] h-[60px] text-[#333] mt-2.5 hover: h-[150px]">
             {content}
