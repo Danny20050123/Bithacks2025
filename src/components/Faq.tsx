@@ -5,30 +5,43 @@ import { ChevronDown } from "lucide-react";
 const Faq = () => {
   const [openFaqs, setOpenFaqs] = useState<number[]>([]);
 
+  type FaqItem = {
+    question: string;
+    answer: React.ReactNode;
+  };
+
   const faqData = [
     {
       question: "What is BitHacks?",
-      answer: "BitHacks is an event where participants collaborate and compete to create the most innovative embedded projects within a weekend."
+      answer: "BitHacks is an event by IEEE and Theta Tau where hackers collaborate and compete to create the most innovative embedded projects within a weekend."
     },
     {
       question: "Who can participate in BitHacks?",
-      answer: "Any college student can apply to participate in BitHacks."
+      answer: "Any college student can apply to participate in BitHacks. We welcome hackers of all skill levels, no prior coding or embedded experience is needed."
     },
+    // {
+    //   question: "Do I need to know how to code or work with embedded software?",
+    //   answer: "No coding experience is needed, we welcome beginners and provide mentors to help you learn."
+    // },
     {
-      question: "Do I need to know how to code or work with embedded software?",
-      answer: "No coding experience is needed, we welcome beginners and provide mentors to help you learn."
-    },
-    {
-      question: "When do applications close? When will decisions come out?",
+      question: "When do applications close?",
       answer: "Applications close March 21. Decision details will be released closer to the event."
     },
+    // {
+    //   question: "What should I bring?",
+    //   answer: "Bring your laptop, charger, a form of ID, and any personal items you'll need for the duration of the event."
+    // },
     {
-      question: "What should I bring?",
-      answer: "Bring your laptop, charger, a form of ID, and any personal items you'll need for the duration of the event."
+      question: "What parts will be provided to use?",
+      answer: <>Here is a <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQUZ75eky0jHpDp_vapfN2ATBrxrkZ5mY5WN1bJKSkdKcVwsXL1uxg0MRQaQDway5Vtx2UjyzXWsiAt/pubhtml" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">list</a> for all the parts that will be provided!</>
+    },
+    {
+      question: "Can I bring my own parts to use?",
+      answer: "Feel free to bring your own parts as long as they are under $50."
     },
     {
       question: "What is the schedule like?",
-      answer: "The Opening Ceremony starts at 5 PM and hacking will conclude on Sunday at 10 AM."
+      answer: "The Opening Ceremony starts at 5 PM on April 11 and hacking will conclude on Sunday, April 13 at 10 AM."
     }, 
     {
       question: "Will transportation be provided?",
@@ -41,13 +54,13 @@ const Faq = () => {
   ];
 
   const sponsorData = [
-    { name: "UCI ODIT", link: "https://odit.uci.edu", imageUrl: "/ODITLogoTransparent.png"},
-    { name: "UCI OAI", link: "https://oai.tech.uci.edu", imageUrl: "/inclusion-oai.png" },
+    { name: "IEEE-Eta Kappa Nu", link: "https://hkn.ieee.org/", imageUrl: "/IEEE-EKN.png" },
     { name: "Medtronic", link: "https://www.medtronic.com/", imageUrl: "/medtronic-3.svg" },
     { name: "Northrop Grumman", link: "https://www.northropgrumman.com/", imageUrl: "/NorthropGrumman.svg" },
     { name: "UCI MECPS", link: "https://mecps.uci.edu/", imageUrl: "/MECPS.png" },
     { name: "UCI Samueli School of Engineering", link: "https://engineering.uci.edu/", imageUrl: "/samueli.png" },
-    { name: "IEEE-Eta Kappa Nu", link: "https://hkn.ieee.org/", imageUrl: "/IEEE-EKN.png" }
+    { name: "UCI ODIT", link: "https://odit.uci.edu", imageUrl: "/ODITLogoTransparent.png"},
+    { name: "UCI OAI", link: "https://oai.tech.uci.edu", imageUrl: "/inclusion-oai.png" }
     // { name: "Test8", link: "https://test8.com", imageUrl: "/api/placeholder/150/150" }
   ];
 
