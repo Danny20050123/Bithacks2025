@@ -73,7 +73,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="w-full">
+    <div id = "faq" className="w-full">
       {/* FAQs Section */}
       <div className="bg-white px-6 py-12 relative">
         <h2 className="text-4xl mb-8 text-left text-black">FAQ</h2>
@@ -121,7 +121,7 @@ const Faq = () => {
       </div>
 
       {/* Sponsors Section */}
-      <div className="bg-[#e0e0e0] px-6 py-16">
+      <div id = "sponsors" className="bg-[#e0e0e0] px-6 py-16">
         <h2 className="text-4xl mb-12 text-center text-black">Sponsors</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">

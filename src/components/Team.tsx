@@ -8,7 +8,7 @@ type Member = {
   name: string;
   position: string;
   image: string;
-  category: string;
+  category: string | string[];
   linkedin: string;
 };
 
@@ -16,21 +16,21 @@ type Member = {
 const Cards = () => {
   const defaultImageLink: string = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1200px-Unknown_person.jpg';
 
-
   const teamMembers: Member[] = [
-    { name: 'First Last', position: 'Logistics Manager', image: defaultImageLink, category: 'Logistics', linkedin: 'https://linkedin.com' },
-    { name: 'First Middle Last', position: 'Tech Lead', image: defaultImageLink, category: 'Tech', linkedin: 'https://linkedin.com' },
-    { name: 'First Last', position: 'Web Developer', image: defaultImageLink, category: 'Tech', linkedin: 'https://linkedin.com' },
-    { name: 'First M. Last', position: 'Corporate Member', image: defaultImageLink, category: 'Corporate', linkedin: 'https://linkedin.com' },
-    { name: 'First L.', position: 'Other', image: defaultImageLink, category: 'Other', linkedin: 'https://linkedin.com' },
-    { name: 'First Last', position: 'Logistics Member', image: defaultImageLink, category: 'Logistics', linkedin: 'https://linkedin.com' },
-    { name: '-', position: 'Corporate Lead', image: defaultImageLink, category: 'Corporate', linkedin: 'https://linkedin.com' },
+    { name: 'Wilson Nguyen', position: 'Director', image: defaultImageLink, category: 'Other', linkedin: 'https://www.linkedin.com/in/wilsonng17/' },
+    { name: 'Donovan Chen', position: 'Outreach Lead', image: defaultImageLink, category: 'Outreach', linkedin: 'https://www.linkedin.com/in/donovanachen/' },
+    { name: 'Daniel Li', position: 'Tech Lead', image: defaultImageLink, category: 'Tech', linkedin: 'https://www.linkedin.com/in/ningyuan-li/' },
+    { name: 'German Cervantes', position: 'Workshop and Logistics Committee', image: defaultImageLink, category: ['Tech', 'Logistics'], linkedin: 'https://www.LinkedIn.com/in/germancerv/' },
+    { name: 'Jonathan Lin', position: 'Workshop Committee', image: defaultImageLink, category: 'Tech', linkedin: 'https://www.linkedin.com/in/linjonathan001/' },
+    { name: 'Vanessa Shimizu', position: 'Outreach and Graphics Committee', image: defaultImageLink, category: 'Outreach', linkedin: 'https://www.linkedin.com/in/vanessa-shimizu-/' },
   ];
 
-
-  const [filter, setFilter] = useState<string>('View All');
-  const filteredMembers = filter === 'View All' ? teamMembers : teamMembers.filter((member) => member.category === filter);
-
+  const [filter, setFilter] = useState<string>('Directors/Leads');
+  const filteredMembers = (filter === 'Directors/Leads' ? 
+  teamMembers.filter((member => member.position.includes('Lead') || member.position.includes('Director'))) : 
+  teamMembers.filter(member => (Array.isArray(member.category) ? 
+  member.category.includes(filter) : 
+  member.category === filter)));
 
   const LinkIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -41,21 +41,20 @@ const Cards = () => {
   return (
     <div className="px-4">
       <div className="flex flex-wrap gap-2 mb-8 justify-center">
-        {['View All', 'Logistics', 'Corporate', 'Tech', 'Other'].map((option) => (
+        {['Directors/Leads', 'Logistics', 'Outreach', 'Tech'].map((option) => (
           <button
             key={option}
             onClick={() => setFilter(option)}
-            className="px-4 py-2 text-white rounded bg-cover bg-center transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 hover:bg-opacity-50"
-          >
+            className="w-36 px-4 py-2 text-white rounded-full bg-violet-500 transition-transform duration-300 transform hover:scale-105 hover:bg-violet-600"
+            >
             {option}
           </button>
         ))}
       </div>
 
-
-      <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,250px))]">
+      <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,auto))]">
         {filteredMembers.map((member, index) => (
-          <div key={index} className="max-w-[250px] w-full">
+          <div key={index} className="w-full md:max-w-[250px] mx-auto">
             <div className="relative group rounded-lg overflow-hidden h-80">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
@@ -71,7 +70,7 @@ const Cards = () => {
               </div>
             </div>
             <div className="mt-4 text-center">
-              <h3 className="text-xl font-semibold text-white">{member.name}</h3>
+              <h3 className="text-xl font-semibold text-gray-400">{member.name}</h3>
               <p className="text-gray-300">{member.position}</p>
             </div>
           </div>
@@ -81,11 +80,10 @@ const Cards = () => {
   );
 };
 
-
 const Team = () => {
   return (
     <div className="container mx-auto px-4 py-8" id="team">
-      <h1 className="text-3xl md:text-4xl font-bold text-left mb-8 text-white text-center">Our Team</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-left mb-8 text-gray-400 text-center">Our Team</h1>
       <Cards />
     </div>
   );

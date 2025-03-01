@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-
+import Model from "./model";
 const Landing = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const Landing = () => {
             BitHacks
           </p>
           <p className="text-center text-lg px-[2.25rem] md:text-left md:text-xl md:pl-1">
-            UCI's first embedded systems hackathon
+            UCI's first Embedded Systems hackathon
           </p>
         </div>
         <div className="flex-col items-center md-items-left md:flex-row md:justify-left gap-3.5 flex">
@@ -33,6 +33,9 @@ const Landing = () => {
           >
             Mentor
           </motion.button>
+        </div>
+        <div className="h-0, w-0 md: ">
+          <Model />
         </div>
       </div>
     </>
