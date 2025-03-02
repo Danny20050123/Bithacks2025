@@ -10,12 +10,12 @@ const rethink = Rethink_Sans({
   subsets: ["latin"],
 });
 
-// const jersey = Jersey_25({
-//   variable: "--font-jersey-25",
-//   weight: "400",
-//   subsets: ["latin"],
-//   display: "swap",
-// });
+const jersey = Jersey_25({
+  variable: "--font-jersey-25",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "BitHacks UCI",
@@ -35,8 +35,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/ieee.svg" sizes="any" />
       </head>
-      <body className={`${rethink.variable} antialiased`}>{children}</body>
-      {/* <body className={`${jersey.variable}`}>{children}</body> */}
+      <body className={`${rethink.variable} ${jersey.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
