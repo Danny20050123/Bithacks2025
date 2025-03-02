@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 export default {
   content: [
@@ -11,6 +12,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        rethink: ["var(--font-rethink-sans)", ...fontFamily.sans],
+        jersey: ["var(--font-jersey-25)", ...fontFamily.sans],
       },
     },
   },
