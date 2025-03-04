@@ -73,7 +73,7 @@ const Faq = () => {
   };
 
   return (
-    <div id = "faq" className="w-full">
+    <div id = "faq" className="w-full relative">
       {/* FAQs Section */}
       <div className="bg-[#6C81E6] px-6 py-12 relative">
         <h2 className="font-jersey text-5xl mb-8 text-left text-[#332FAC]">FAQ</h2>
@@ -113,32 +113,52 @@ const Faq = () => {
             </div>
           ))}
 
-        <div className="left-6 top-1/2 transform -translate-y-100">
-        <img 
-          src="/star_pixel_blue.svg" 
-          alt="Blue star" 
-          className="w-20 h-50"
-        />
-      </div>
-
         </div>
 
+        <div className="absolute bottom-10 left-4 w-20 h-20 z-10 hidden md:block">
+        <img 
+          src="/star_pixel_blue.svg" 
+          alt="Blue Star" 
+          className="w-full h-full object-contain"
+        />
+      </div> 
+      
         {/* Diagonal Divider */}
         <div 
           className="absolute left-0 right-0 w-full"
           style={{
             height: '100px',
             background: 'linear-gradient(to right bottom, #6C81E6 49.5%, #DFBAFF 50%)',
-            marginTop: '-35px'
+            marginTop: '-52px'
           }}
         />
       </div>
 
       {/* Sponsors Section */}
-      <div id = "sponsors" className="bg-[#DFBAFF] px-6 py-16">
+      <div id = "sponsors" className="bg-[#DFBAFF] px-6 py-16 ">
         
+        
+
         <h2 className="font-jersey text-5xl mb-12 text-center text-[#332FAC]">Sponsors</h2>
         
+        {/* Top-Right Pixel Star */}
+        <div className="absolute bottom-20 right-0 w-24 h-24 mb-20 mr-4">
+          <img 
+            src="/star_pixel_blue.svg"
+            alt="Pink Star" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+
+        {/* Character Graphic */}
+        <div className="absolute bottom-0 right-0 w-48 h-48 mb-4 mr-4">
+          <img 
+            src="/kick_character.PNG" 
+            alt="Mascot Character" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {sponsorData.map((sponsor, index) => (
             <div 
