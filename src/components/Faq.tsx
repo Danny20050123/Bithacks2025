@@ -41,7 +41,7 @@ const Faq = () => {
     },
     {
       question: "What is the schedule like?",
-      answer: "The Opening Ceremony starts at 5 PM on April 11 and hacking will conclude on Sunday, April 13 at 10 AM."
+      answer: "Check-in ends at 7 PM on April 11 and hacking will conclude on Sunday, April 13 at 9 AM."
     }, 
     {
       question: "Will transportation be provided?",
@@ -115,7 +115,7 @@ const Faq = () => {
 
         </div>
 
-        <div className="absolute bottom-10 left-4 w-20 h-20 z-10 hidden md:block">
+        <div className="absolute bottom-10 left-4 w-[6rem] h-[6rem] z-[5]">
         <img 
           src="/star_pixel_blue.svg" 
           alt="Blue Star" 
@@ -142,7 +142,7 @@ const Faq = () => {
         <h2 className="font-jersey text-5xl mb-12 text-center text-[#332FAC]">Sponsors</h2>
         
         {/* Top-Right Pixel Star */}
-        <div className="absolute bottom-20 right-0 w-24 h-24 mb-20 mr-4">
+        <div className="absolute bottom-21 right-0 w-[7rem] h-[7rem] mb-20 mr-6 hidden lg:block">
           <img 
             src="/star_pixel_blue.svg"
             alt="Pink Star" 
@@ -151,15 +151,15 @@ const Faq = () => {
         </div>
 
         {/* Character Graphic */}
-        <div className="absolute bottom-0 right-0 w-48 h-48 mb-4 mr-4">
+        <div className="absolute -bottom-20 -right-5 w-[50rem] h-[40rem] -mb-20 mr-0 hidden lg:block overflow-visible">
           <img 
             src="/kick_character.PNG" 
             alt="Mascot Character" 
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain translate-x-1/4"
           />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {sponsorData.map((sponsor, index) => (
             <div 
               key={index}
@@ -173,10 +173,10 @@ const Faq = () => {
               {/* Hover overlay w/animation */}
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-white text-2xl font-semibold mb-2">{sponsor.name}</p>
+                  <p className="text-white text-xl font-semibold mb-2">{sponsor.name}</p>
                   <a 
                     href={sponsor.link}
-                    className="text-white text-xl underline hover:text-blue-200 transition-colors"
+                    className="text-white text-l underline hover:text-blue-200 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
