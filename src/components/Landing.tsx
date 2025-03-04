@@ -7,29 +7,28 @@ const Landing = () => {
     <>
       <div className="m-auto h-[60vh] md:h-[90vh] md:pl-[10rem] md:m-0 w-fit flex justify-center flex-col">
         <div className="pb-4">
-          <p className="text-center text-7xl md:text-left md:text-8xl">
+          <p className="font-jersey text-center text-7xl md:text-left md:text-8xl">
             BitHacks
           </p>
-          <p className="text-center text-lg px-[2.25rem] md:text-left md:text-xl md:pl-1">
+          <p className="font-rethink text-center text-lg px-[2.25rem] md:text-left md:text-xl md:pl-1">
             UCI's first Embedded Systems hackathon
           </p>
         </div>
-        <div className="flex-col items-center md-items-left md:flex-row md:justify-left gap-3.5 flex">
+        <div className="font-rethink flex-col items-center md-items-left md:flex-row md:justify-left gap-3.5 flex">
           <motion.button
-            whileHover={{ scale: 1.2, backgroundColor: "#724CF1" }}
+            whileHover={{ scale: 1.2, backgroundColor: "#8BDCFE" }}
             whileTap={{ scale: 0.9 }}
-            className="bg-violet-500 rounded-full text-xl md:text-sm py-2 px-24 md:px-4 md:py-1.5 w-fit"
+            className="bg-[#A6EFFF] rounded-full text-xl md:text-sm py-2 px-24 md:px-4 md:py-1.5 w-fit"
           >
             Hacker
           </motion.button>
           <motion.button
             whileHover={{
               scale: 1.2,
-              borderColor: "#724CF1",
-              backgroundColor: "#724CF1",
+              backgroundColor: "#C9A4FF",
             }}
-            whileTap={{ scale: 0.9, backgroundColor: "#724CF1" }}
-            className="border-violet-500 rounded-full border-2 border-solid text-xl py-2 px-24 md:text-sm md:px-4 md:py-1.5 w-fit"
+            whileTap={{ scale: 0.9 }}
+            className="bg-[#E3C4FF] rounded-full text-xl py-2 px-24 md:text-sm md:px-4 md:py-1.5 w-fit"
           >
             Mentor
           </motion.button>
