@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Jersey_25, Rethink_Sans } from "next/font/google";
+// import { Cabin } from "next/font/google";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const rethink = Rethink_Sans({
+  variable: "--font-rethink-sans",
+  weight: "400",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jersey = Jersey_25({
+  variable: "--font-jersey-25",
+  weight: "400",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -30,9 +35,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/ieee.svg" sizes="any" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${rethink.variable} ${jersey.variable} antialiased`}>
         {children}
       </body>
     </html>
