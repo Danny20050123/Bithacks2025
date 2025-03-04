@@ -27,7 +27,7 @@ const Cards = () => {
     { name: 'German Cervantes', position: 'Workshop and Logistics Committee', image: 'team-members/german.jpg', category: ['Tech', 'Logistics'], linkedin: 'https://www.LinkedIn.com/in/germancerv/' },
     { name: 'Jonathan Lin', position: 'Workshop Committee', image: 'team-members/jonathan.jpg', category: 'Tech', linkedin: 'https://www.linkedin.com/in/linjonathan001/' },
     { name: 'Vanessa Shimizu', position: 'Outreach and Graphics Committee', image: 'team-members/vanessa.jpg', category: 'Outreach', linkedin: 'https://www.linkedin.com/in/vanessa-shimizu-/' },
-    { name: 'Angie Xetey', position: 'Graphics and Marketing Committee', image: 'team-members/angie.jpg', linkedin: 'https://www.linkedin.com/in/angie-xetey/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+    { name: 'Angie Xetey', position: 'Graphics and Marketing Committee', image: 'team-members/angie.jpg', category: 'Outreach', linkedin: 'https://www.linkedin.com/in/angie-xetey/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
     { name: 'Alan Tran', position: 'Logistics Committee', image: 'team-members/alan.jpg', category: 'Logistics', linkedin: 'https://www.linkedin.com/in/alantran296' },
     { name: 'Elise Ji', position: 'Logistics Committee', image: 'team-members/elise.jpg', category: 'Logistics', linkedin: 'https://www.linkedin.com/in/elise-ji/' },
     { name: 'Duy Tran', position: 'Logistics Committee', image: 'team-members/duy.jpg', category: 'Logistics', linkedin: 'https://www.linkedin.com/in/duytran1212' },
@@ -99,15 +99,29 @@ const Cards = () => {
 
 const Team = () => {
   return (
-    <div className="container mx-auto px-4 py-8" id="team" style = {{ 
-      backgroundImage: "url('/shooting_star_pixel_blue.svg')",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "left top",
-      backgroundSize: "300px",
-    }}>
-      <h1 className="text-3xl md:text-5xl font-sem-bold text-left mb-8 text-gray-400 text-center font-jersey" style={{ color: '#332FAC' }}>Our Team</h1>
-      <Cards />
-    </div>
+    <>
+      <div className="block md:hidden container mx-auto my-auto px-4 py-8" id="team" style = {{ 
+        backgroundImage: "url('/shooting_star_pixel_blue.svg')",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center bottom",
+        backgroundSize: "300px",
+        paddingBottom: "300px"
+      }}>
+        <h1 className="text-3xl font-sem-bold mb-8 text-gray-400 text-center font-jersey" style={{ color: '#332FAC' }}>Our Team</h1>
+        <Cards />
+      </div>
+
+      <div className="hidden md:block container mx-auto my-auto px-4 py-8" id="team" style = {{ 
+        backgroundImage: "url('/shooting_star_pixel_blue.svg'), url('/music_character.PNG'), url('/star_pixel_blue.svg')",
+        backgroundRepeat: "no-repeat, no-repeat, no-repeat",
+        backgroundPosition: "10% 95%, right bottom, 16% 100%",
+        backgroundSize: "360px, 600px, 80px",
+        paddingBottom: "400px"
+      }}>
+        <h1 className="text-5xl font-sem-bold mb-8 text-gray-400 text-center font-jersey" style={{ color: '#332FAC' }}>Our Team</h1>
+        <Cards />
+      </div>
+    </>
   );
 };
 
