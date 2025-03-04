@@ -5,7 +5,7 @@ import { GLTFLoader } from "three-stdlib";
 export default function ThreeScene() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const pivotRef = useRef<THREE.Object3D | null>(null);
-  const [isLargeScreen, setIsLargeScreen] = useState(false); // ✅ Default to false for SSR safety
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -24,7 +24,7 @@ export default function ThreeScene() {
     if (!isLargeScreen || !containerRef.current) return;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x111111);
+    scene.background = new THREE.Color(0x6C81E6);
 
     const aspectRatio = window.innerWidth / window.innerHeight;
     const camera = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 1000);
