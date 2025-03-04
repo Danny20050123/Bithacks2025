@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <>
       <div id="home" className="relative">
-      <nav className="flex fixed w-[100vw] backdrop-blur-sm bg-[#332FAC]/65 justify-between z-10 items-center px-10 py-1 md:py-6">
+        <nav className="flex fixed w-[100vw] backdrop-blur-sm bg-[#332FAC]/65 justify-between z-10 items-center px-10 py-1">
           <button onClick={() => scrollToSection("home")}>
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
               <Image
@@ -75,7 +75,7 @@ const Navbar = () => {
                 }}
                 className="fixed z-10 top-20 right-10 md:hidden"
               >
-                <ul className="z-10 bg-[#4E55CD] drop-shadow-lg rounded-lg flex flex-col text-right px-8 py-4 w-fit gap-8">
+                <ul className="z-10 bg-[#4E55CD] text-white drop-shadow-lg rounded-lg flex flex-col text-right px-8 py-4 w-fit gap-8">
                   {["about", "tracks", "faq", "sponsors", "team"].map((id) => (
                     <button key={id} onClick={() => scrollToSection(id)}>
                       {id.charAt(0).toUpperCase() + id.slice(1)}
