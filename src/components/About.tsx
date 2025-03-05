@@ -15,22 +15,25 @@ const About = () => {
         waitUntilVisible: true,
         loop: true,
       })
-        .type("$1000+ in Prizes")
+        .type("$6000+ in Prizes")
         .pause(1000)
         .delete(20)
         .pause(1000)
-        .type("Prizes include: Monitors")
+        .type("Prizes include: Sony PlayStation 5s")
         .pause(1000)
-        .delete(8)
+        .delete(19)
         .pause(1000)
-        .type("Kisses from Danny")
+        .type("Nintendo Switch Lites")
         .pause(1000)
-        .delete(17)
+        .delete(21)
         .pause(1000)
-        .type("Free IEEE position")
+        .type("JBL Flip 5 speakers for Fetty Wap")
         .pause(1000)
-        .delete(18)
+        .delete(33)
         .pause(1000)
+        .type("Lego Sets and More!")
+        .pause(1000)
+        .delete(200)
         .go();
     }
   }, []);
