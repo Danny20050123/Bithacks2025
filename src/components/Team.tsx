@@ -100,27 +100,30 @@ const Cards = () => {
 const Team = () => {
   return (
     <>
-      <div className="block md:hidden container mx-auto my-auto px-4 py-8" id="team" style = {{ 
-        backgroundImage: "url('/shooting_star_pixel_blue.svg')",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center bottom",
-        backgroundSize: "300px",
-        paddingBottom: "300px"
-      }}>
-        <h1 className="text-3xl font-sem-bold mb-8 text-gray-400 text-center font-jersey" style={{ color: '#332FAC' }}>Our Team</h1>
+      <div className="relative container mx-auto my-auto px-4 py-8" id="team">
+        <div
+          className="absolute top-0 left-0 w-full h-full"
+          style={{
+            backgroundImage: window.innerWidth < 768 
+              ? "url('/shooting_star_pixel_blue.svg')" 
+              : "url('/shooting_star_pixel_blue.svg'), url('/star_pixel_blue.svg'), url('/music_character.PNG')",
+            backgroundRepeat: "no-repeat, no-repeat, no-repeat",
+            backgroundPosition: window.innerWidth < 768 
+              ? "top center" 
+              : "10% 5%, 16% 0%, right bottom",
+            backgroundSize: window.innerWidth < 768 
+              ? "300px" 
+              : "360px, 80px, 600px",
+            zIndex: "-1",
+          }}
+        ></div>
+
+        <h1 className="text-3xl md:text-5xl font-sem-bold mb-8 text-gray-400 text-center font-jersey" style={{ color: '#332FAC' }}>
+          Our Team
+        </h1>
         <Cards />
       </div>
 
-      <div className="hidden md:block container mx-auto my-auto px-4 py-8" id="team" style = {{ 
-        backgroundImage: "url('/shooting_star_pixel_blue.svg'), url('/music_character.PNG'), url('/star_pixel_blue.svg')",
-        backgroundRepeat: "no-repeat, no-repeat, no-repeat",
-        backgroundPosition: "10% 95%, right bottom, 16% 100%",
-        backgroundSize: "360px, 600px, 80px",
-        paddingBottom: "400px"
-      }}>
-        <h1 className="text-5xl font-sem-bold mb-8 text-gray-400 text-center font-jersey" style={{ color: '#332FAC' }}>Our Team</h1>
-        <Cards />
-      </div>
     </>
   );
 };
