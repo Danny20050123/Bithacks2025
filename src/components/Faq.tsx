@@ -135,9 +135,16 @@ const Faq = () => {
       </div>
 
       {/* Sponsors Section */}
-      <div id = "sponsors" className="bg-[#DFBAFF] px-6 py-16 ">
+      <div id = "sponsors" className="bg-[#DFBAFF] px-6 py-16">
         
-        
+        {/* Mobile Character Graphic */}
+        <div className="sm:hidden w-[40rem] h-[40rem] -translate-x-[1rem] -mt-20">
+          <img 
+            src="/kick_character.PNG" 
+            alt="Mobile Mascot" 
+            className="w-full h-full object-contain"
+          />
+        </div>
 
         <h2 className="font-jersey text-5xl mb-12 text-center text-[#332FAC]">Sponsors</h2>
         
@@ -159,7 +166,7 @@ const Faq = () => {
           />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {sponsorData.map((sponsor, index) => (
             <div 
               key={index}
@@ -186,6 +193,14 @@ const Faq = () => {
               </div>
             </div>
           ))}
+        </div>
+          {/* Mobile Star Graphic */}
+          <div className="sm:hidden bottom-0 mt-12 w-[7rem] h-[7rem] translate-x-[14.75rem]">
+          <img 
+            src="/star_pixel_blue.svg"
+            alt="Mobile Pink Star" 
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
     </div>
