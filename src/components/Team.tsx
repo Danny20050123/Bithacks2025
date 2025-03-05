@@ -110,7 +110,7 @@ const Team = () => {
             backgroundRepeat: "no-repeat, no-repeat, no-repeat",
             backgroundPosition: window.innerWidth < 768 
               ? "top center" 
-              : "10% 5%, 16% 0%, right bottom",
+              : "10% 5%, 16% 0%, 115% bottom",
             backgroundSize: window.innerWidth < 768 
               ? "300px" 
               : "360px, 80px, 600px",
