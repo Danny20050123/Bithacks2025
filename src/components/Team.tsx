@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 
@@ -98,20 +98,34 @@ const Cards = () => {
 };
 
 const Team = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Run once on mount to set initial state
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <div className="relative container mx-auto my-auto px-4 py-8" id="team">
         <div
           className="absolute top-0 left-0 w-full h-full"
           style={{
-            backgroundImage: window.innerWidth < 768 
+            backgroundImage: isMobile 
               ? "url('/shooting_star_pixel_blue.svg')" 
               : "url('/shooting_star_pixel_blue.svg'), url('/star_pixel_blue.svg'), url('/music_character.PNG')",
             backgroundRepeat: "no-repeat, no-repeat, no-repeat",
-            backgroundPosition: window.innerWidth < 768 
+            backgroundPosition: isMobile  
               ? "top center" 
               : "10% 5%, 16% 0%, 115% bottom",
-            backgroundSize: window.innerWidth < 768 
+            backgroundSize: isMobile  
               ? "300px" 
               : "360px, 80px, 600px",
             zIndex: "-1",
