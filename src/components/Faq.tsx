@@ -125,7 +125,7 @@ const Faq = () => {
       
         {/* Diagonal Divider */}
         <div 
-          className="absolute left-0 right-0 w-full"
+          className="absolute left-0 right-0 w-full "
           style={{
             height: '100px',
             background: 'linear-gradient(to right bottom, #6C81E6 49.5%, #DFBAFF 50%)',
@@ -137,31 +137,31 @@ const Faq = () => {
       {/* Sponsors Section */}
       <div id = "sponsors" className="bg-[#DFBAFF] px-6 py-16">
         
-        {/* Mobile Character Graphic */}
-        <div className="sm:hidden w-[40rem] h-[40rem] -translate-x-[1rem] -mt-20">
+        {/* Mobile Anteater Graphic */}
+        <div className="sm:hidden w-[40rem] h-[40rem] -translate-x-[1rem] -mt-20 overflow-hidden">
           <img 
             src="/kick_character.PNG" 
-            alt="Mobile Mascot" 
+            alt="Anteater kicking" 
             className="w-full h-full object-contain"
           />
         </div>
 
         <h2 className="font-jersey text-5xl mb-12 text-center text-[#332FAC]">Sponsors</h2>
         
-        {/* Top-Right Pixel Star */}
-        <div className="absolute bottom-21 right-0 w-[7rem] h-[7rem] mb-20 mr-6 hidden lg:block">
+        {/* Sponsors Pink Star */}
+        <div className="absolute bottom-21 right-0 w-[7rem] h-[7rem] mb-20 mr-6 hidden lg:block overflow-hidden">
           <img 
-            src="/star_pixel_blue.svg"
+            src="/star_pixel_light_pink.svg"
             alt="Pink Star" 
             className="w-full h-full object-contain"
           />
         </div>
 
-        {/* Character Graphic */}
-        <div className="absolute -bottom-20 -right-5 w-[50rem] h-[40rem] -mb-20 mr-0 hidden lg:block overflow-visible">
+        {/* Anteater Kick Graphic */}
+        <div className="absolute -bottom-20 -right-5 w-[50rem] h-[40rem] -mb-20 mr-0 hidden lg:block overflow-hidden">
           <img 
             src="/kick_character.PNG" 
-            alt="Mascot Character" 
+            alt="Anteater kicking" 
             className="w-full h-full object-contain translate-x-1/4"
           />
         </div>
@@ -195,10 +195,10 @@ const Faq = () => {
           ))}
         </div>
           {/* Mobile Star Graphic */}
-          <div className="sm:hidden bottom-0 mt-12 w-[7rem] h-[7rem] translate-x-[14.75rem]">
+          <div className="sm:hidden bottom-0 mt-12 w-[7rem] h-[7rem] translate-x-[14.75rem] overflow-hidden">
           <img 
-            src="/star_pixel_blue.svg"
-            alt="Mobile Pink Star" 
+            src="/star_pixel_light_pink.svg"
+            alt="Light Pink Star" 
             className="w-full h-full object-contain"
           />
         </div>
