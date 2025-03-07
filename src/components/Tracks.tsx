@@ -9,7 +9,7 @@ import CardComponent from "./Card";
 
 const Tracks = () => {
   return (
-    <div className="flex justify-center bg-[#B69BFB] h-[2400px] rounded-[15px] md:h-[1000px]" id = "tracks">
+    <div className="flex justify-center bg-[#B69BFB] h-[2400px] md:h-[1000px]" id = "tracks">
       <div className="invisble md:visible absolute opactiy-100 top-[2050px] h-[400px] w-[600px] left-[50px] justify-left items-left">
       <img className="md:absolute h-[200px] w-[200px] left-0 justify-left items-left rotate-12" src="/star_pixel_pink.svg" alt="Decorative content"/>
       </div>

@@ -22,7 +22,7 @@ const CardComponent: React.FC<CardProps> = ({ title, content, img}) => {
           <h1 className="relative flex w-[200px] h-[300px] text-[30px] items-center text-center justify-center font-jersey top-[-150px] z-[10] group-hover:opacity-100">{title}</h1>
           </div>
           <div className="relative top-[-100px] flex opacity-0 justify-center transition-[2s] duration-[ease-in-out] py-2.5 group-hover:opacity-100">
-          <p className="relative text-[25px] text-center font-jersey top-[-150px] z-[10] text-[#333] mt-2.5">
+          <p className="relative text-[20px] text-center font-rethink top-[-150px] z-[10] text-[#333] mt-2.5">
             {content}
           </p>
           </div>
