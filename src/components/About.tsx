@@ -71,7 +71,7 @@ const About = () => {
           backgroundSize: "cover",
           backgroundPosition: "top",
         }}
-        className="h-screen overflow-hidden w-[100vw]"
+        className="h-screen overflow-hidden w-100"
       >
         <div className="font-rethink pl-10 md:pl-[10rem] h-[60vh] w-fit flex flex-col justify-center">
           <div>
