@@ -73,10 +73,10 @@ const About = () => {
         }}
         className="h-screen overflow-hidden w-100"
       >
-        <div className="font-rethink pl-10 md:pl-[10rem] h-[60vh] w-fit flex flex-col justify-center">
+        <div className="relative font-rethink gap-16 pl-10 md:pl-[10rem] h-[60vh] w-fit flex flex-row items-center">
           {/* <div className="bg-purple-400 h-[screen] w-[60%]"> */}
-          <div className="bg-white h-screen w-[50%]">
-            <p className="font-rethink p-8 text-[1.5rem]">
+          <div className="sticky bg-white h-[60%] w-[50%]">
+            <p className="font-rethink p-8 text-2xl">
               As UCI's first Embedded Systems hackathon, BitHacks is focused on
               providing a space for students to <b>create</b>, <b>explore</b>,
               and <b>grow</b>. BitHacks aims to foster creativity and{" "}
@@ -84,10 +84,15 @@ const About = () => {
             </p>
           </div>
           {/* </div> */}
-          <div>
-            <p className="">April 11-13 • Doheny Beach Student Center</p>
+          <div className="">
+            <p className="md:text-xl">
+              April 11-13 • Doheny Beach Student Center
+            </p>
             <p className="text-4xl md:text-5xl">36 Hours</p>
-            <p id="prizes" className="text-4xl md:text-5xl pb-4"></p>
+            <p
+              id="prizes"
+              className="h-[12.5rem] w-[20rem] text-4xl md:text-5xl pb-4"
+            ></p>
             {/* <motion.button
           whileHover={{ scale: 1.2, backgroundColor: "#724CF1" }}
           whileTap={{ scale: 0.9, backgroundColor: "#724CF1" }}
