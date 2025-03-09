@@ -29,7 +29,7 @@ const Navbar = () => {
           <button onClick={() => scrollToSection("home")}>
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
               <Image
-                src="/bithacks-logo.png"
+                src="/bithacks_logo_black.svg"
                 width={72}
                 height={72}
                 alt={"bithacks logo"}

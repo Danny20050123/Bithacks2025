@@ -18,10 +18,10 @@ const jersey = Jersey_25({
 });
 
 export const metadata: Metadata = {
-  title: "BitHacks UCI",
-  description: "BitHacks UCI",
+  title: "BitHacks UCI 2025",
+  description: "BitHacks UCI 2025",
   icons: {
-    icon: "/ieee.svg",
+    icon: "bithacks_logo_black.svg",
   },
 };
 
