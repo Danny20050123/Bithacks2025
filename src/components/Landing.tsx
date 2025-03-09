@@ -15,23 +15,27 @@ const Landing = () => {
           </p>
         </div>
         <div className="font-rethink flex-col items-center md-items-left md:flex-row md:justify-left gap-3.5 flex">
-          <motion.button
+          <motion.a
             whileHover={{ scale: 1.2, backgroundColor: "#8BDCFE" }}
             whileTap={{ scale: 0.9 }}
             className="bg-[#A6EFFF] rounded-full text-xl md:text-sm py-2 px-24 md:px-4 md:py-1.5 w-fit"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdT3rTJIAAeaHsOPRIgOMsE9l8p7ghiLCNUhshDlFkHNLix2Q/viewform?usp=sharing"
+            target="_blank"
           >
             Hacker
-          </motion.button>
-          <motion.button
+          </motion.a>
+          <motion.a
             whileHover={{
               scale: 1.2,
               backgroundColor: "#C9A4FF",
             }}
             whileTap={{ scale: 0.9 }}
             className="bg-[#E3C4FF] rounded-full text-xl py-2 px-24 md:text-sm md:px-4 md:py-1.5 w-fit"
+            href="https://forms.gle/2QB1acCUP5RmfnEf6"
+            target="_blank"
           >
             Mentor
-          </motion.button>
+          </motion.a>
         </div>
         <div className="h-0, w-0 md: ">
           <Model />
