@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import AboutCard from "../components/AboutCard";
 import TypeIt from "typeit";
-import Image from "next/image";
 
 const About = () => {
   useEffect(() => {
@@ -73,10 +72,13 @@ const About = () => {
         }}
         className="h-screen flow-hidden right-5 w-100"
       >
-        <div id="about" className="relative font-rethink gap-16 m-auto md:m-0 md:pl-10 md:px-[4rem] h-[60vh] w-fit flex flex-row items-center">
+        <div
+          id="about"
+          className="relative font-rethink gap-16 m-auto md:m-0 md:pl-10 md:px-[4rem] h-[60vh] w-fit flex flex-row items-center"
+        >
           <div>
             <AboutCard />
-            <div className="bg-[#6c81e6]/65 mt-8 p-8 w-[20rem] md:w-[32rem] rounded-lg">
+            <div className="bg-[#6c81e6]/65 text-white mt-8 p-8 w-[20rem] md:w-[32rem] rounded-lg">
               <p className="md:text-xl">
                 April 11-13 • Doheny Beach Student Center
               </p>
