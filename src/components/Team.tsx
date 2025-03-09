@@ -159,6 +159,20 @@ const Cards = () => {
       category: "Outreach",
       linkedin: "https://linkedin.com/in/stevdn",
     },
+    {
+      name: "Arianna Sotudeh",
+      position: "Logistics Committee",
+      image: "team-members/arianna.jpg",
+      category: "Logistics",
+      linkedin: "https://www.linkedin.com/in/arianna-sotudeh-610a63237/"
+    },
+    {
+      name: "Dhivyesh Kanagasabai",
+      position: "Web Developer",
+      image: "team-members/dhivyesh.jpg",
+      category: "Tech",
+      linkedin: "https://www.linkedin.com"
+    }
   ];
 
   const [filter, setFilter] = useState<string>("Directors/Leads");
@@ -206,9 +220,10 @@ const Cards = () => {
         ))}
       </div>
 
-      <div className="grid gap-6 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,auto))] justify-items-start">
-        {filteredMembers.map((member, index) => (
-          <div key={index} className="w-full md:max-w-[300px] mx-auto">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-4 justify-center">
+        <div className="col-span-full flex flex-wrap justify-center gap-6">
+          {filteredMembers.map((member, index) => (
+            <div key={index} className="w-[275px]">
             <div className="relative group rounded-lg overflow-hidden h-80">
               <Image
                 src={`/${member.image}`}
@@ -244,6 +259,7 @@ const Cards = () => {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </div>
   );
@@ -266,7 +282,7 @@ const Team = () => {
   }, []);
   return (
     <>
-      <div className="relative container mx-auto my-auto px-4 py-8" id="team">
+      <div className="relative container mx-auto my-auto px-4 py-8 min-h-[105vh]" id="team">
         <div
           className="absolute top-0 left-0 w-full h-full"
           style={{
