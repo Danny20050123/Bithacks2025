@@ -10,17 +10,17 @@ import CardComponent from "./Card";
 const Tracks = () => {
   return (
     <div className="flex justify-center bg-[#B69BFB] h-[2400px] md:h-[1000px]" id = "tracks">
-      <div className="invisible w-[100px] md:visible absolute opactiy-100 top-[2050px] h-[400px] w-[600px] left-[50px] justify-left items-left">
+      <div className="invisible md:visible absolute opacity-100 top-[1850px] h-[400px] w-[300px] left-[50px] justify-left items-left">
       <img className="md:absolute h-[200px] w-[200px] left-0 justify-left items-left rotate-12" src="/star_pixel_pink.svg" alt="Decorative content"/>
       </div>
-      <div className="invisible md:absolute opacity-100 top-[2600px] h-[400px] w-[600px] right-10 justify-right items-right invisible md:visible absolute opactiy-100 top-[2600px] h-[800px] w-[600px] right-0 justify-right items-right">
+      <div className="invisible w-[0px] h-[0px] md:absolute md:opacity-100 md:top-[2300px] md:h-[400px] md:w-[600px] md:right-10 md:justify-right md:items-right md:visible">
         <img
           className="md:absolute h-[400px] w-[400px] right-0 justify-left items-left"
           src="/shooting_star_pixel_pink.svg"
           alt="Decorative content"
         />
       </div>
-      <div className="absolute opactiy-100 top-[2600px] h-[400px] w-[600px] left-0 justify-left items-left invisible md:visible absolute opactiy-100 top-[2600px] h-[400px] w-[600px] left-0 justify-left items-left">
+      <div className="invisible w-[0px] h-[0px] md:visible md:absolute md:opacity-100 md:top-[2300px] md:h-[400px] md:w-[400px] md:left-0 md:justify-left md:items-left">
         <img
           className="md:absolute h-[400px] w-[600px] left-0 justify-left items-left [transform:rotateY(180deg)]"
           src="https://s3-alpha-sig.figma.com/img/ca70/c85b/5eb3587c8a062897708a9158999634a9?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Y0cK16tfDh-KuhEZVI7u-iUdwhC0FfpD2Dve0h4ZgW3c1k~tUhADeOXO7RwJGKC~DeHOrnjHFbaXY-c6sUCZMhIaeaEOdJd6IIm9hQRFtAHDnkDfXVh-rxdrQLckLWqq7GutQdoxJuAm7fROLMOuMPIdQw6Z4v5hp5-ABdqlT6R5zT1snWpAPFPG8qoUgXsKvTSxTJEfc-2wAyz5ajOZceiLzAEymRV01x2VkS3vEZN1WbQoq5b2MZgE6N1jOUJhHTtGBL2HRYryz2Z3v6AYwKsO9GYTle0FeJf4Fpe8gEA5tZHbHAsbRNyX3j~xbWWJfOu5MIBwOq939Rf9aACeqw__"
