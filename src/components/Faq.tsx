@@ -119,6 +119,7 @@ const Faq = () => {
   };
 
   return (
+    <>
     <div id="faq" className="w-full relative">
       {/* FAQs Section */}
       <div className="bg-[#6C81E6] px-6 py-12 relative">
@@ -180,76 +181,78 @@ const Faq = () => {
             height: "100px",
             background:
               "linear-gradient(to right bottom, #6C81E6 49.5%, #DFBAFF 50%)",
-            marginTop: "-52px",
+            marginTop: "-51px",
           }}
         />
       </div>
+    </div>
 
-      {/* Sponsors Section */}
-      <div id="sponsors" className="bg-[#DFBAFF] px-6 py-16">
-        {/* Mobile Anteater Graphic */}
-        <div className="sm:hidden w-[40rem] h-[40rem] -translate-x-[1rem] -mt-20 overflow-hidden">
-          <img
-            src="/kick_character.PNG"
-            alt="Anteater kicking"
-            className="w-full h-full object-contain"
-          />
-        </div>
+    {/* Sponsors Section */}
+    <div id="sponsors" className="bg-[#DFBAFF] px-6 py-16">
+      {/* Mobile Anteater Graphic */}
+      <div className="sm:hidden relative w-full -mt-20 flex justify-center overflow-hidden">
+        <img
+          src="/kick_character.PNG"
+          alt="Anteater kicking"
+          className="w-full h-full object-contain"
+        />
+      </div>
 
-        <h2 className="font-jersey text-5xl mb-12 text-center text-[#332FAC]">
-          Sponsors
-        </h2>
+      <h2 className="font-jersey text-5xl mb-12 text-center text-[#332FAC]">
+        Sponsors
+      </h2>
 
-        {/* Sponsors Pink Star */}
-        <div className="absolute bottom-21 right-0 w-[7rem] h-[7rem] mb-20 mr-6 hidden lg:block overflow-hidden">
-          <img
-            src="/star_pixel_light_pink.svg"
-            alt="Pink Star"
-            className="w-full h-full object-contain"
-          />
-        </div>
+      {/* Sponsors Pink Star */}
+      <div className="absolute bottom-21 right-0 w-[7rem] h-[7rem] mb-20 mr-6 hidden lg:block overflow-hidden">
+        <img
+          src="/star_pixel_light_pink.svg"
+          alt="Pink Star"
+          className="w-full h-full object-contain"
+        />
+      </div>
 
-        {/* Anteater Kick Graphic */}
-        <div className="absolute -bottom-20 -right-0 w-[40rem] h-[30rem] -mb-20 mr-0 hidden lg:block overflow-hidden">
-          <img
-            src="/kick_character.PNG"
-            alt="Anteater kicking"
-            className="w-full h-full object-contain translate-x-1/4"
-          />
-        </div>
+      {/* Anteater Kick Graphic */}
+      <div className="absolute -bottom-20 -right-0 w-[40rem] h-[30rem] -mb-20 mr-0 hidden lg:block overflow-hidden">
+        <img
+          src="/kick_character.PNG"
+          alt="Anteater kicking"
+          className="w-full h-full object-contain translate-x-1/4"
+        />
+      </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {sponsorData.map((sponsor, index) => (
-            <div
-              key={index}
-              className="aspect-square bg-white rounded-lg shadow-md p-4 relative group overflow-hidden"
-            >
-              <img
-                src={sponsor.imageUrl}
-                alt={`${sponsor.name} logo`}
-                className="w-full h-full object-contain"
-              />
-              {/* Hover overlay w/animation */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-white text-xl font-semibold mb-2">
-                    {sponsor.name}
-                  </p>
-                  <a
-                    href={sponsor.link}
-                    className="text-white text-l underline hover:text-blue-200 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visit Website
-                  </a>
-                </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {sponsorData.map((sponsor, index) => (
+          <div
+            key={index}
+            className="aspect-square bg-white rounded-lg shadow-md p-4 relative group overflow-hidden"
+          >
+            <img
+              src={sponsor.imageUrl}
+              alt={`${sponsor.name} logo`}
+              className="w-full h-full object-contain"
+            />
+            {/* Hover overlay w/animation */}
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <p className="text-white text-xl font-semibold mb-2">
+                  {sponsor.name}
+                </p>
+                <a
+                  href={sponsor.link}
+                  className="text-white text-l underline hover:text-blue-200 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Website
+                </a>
               </div>
             </div>
-          ))}
-        </div>
-        {/* Mobile Star Graphic */}
-        <div className="sm:hidden bottom-0 mt-12 w-[7rem] h-[7rem] translate-x-[14.75rem] overflow-hidden">
+          </div>
+        ))}
+      </div>
+      {/* Mobile Star Graphic */}
+      <div className="sm:hidden mt-12 w-full flex justify-center">
+        <div className="w-[7rem] h-[7rem]">
           <img
             src="/star_pixel_light_pink.svg"
             alt="Light Pink Star"
@@ -258,6 +261,7 @@ const Faq = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
