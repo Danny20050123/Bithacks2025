@@ -9,16 +9,9 @@ import CardComponent from "./Card";
 
 const Tracks = () => {
   return (
-    <div
-      className="flex justify-center bg-[#B69BFB] h-[2400px] md:h-[1000px]"
-      id="tracks"
-    >
-      <div className="invisble md:visible absolute opactiy-100 top-[2050px] h-[400px] w-[600px] left-[50px] justify-left items-left">
-        <img
-          className="md:absolute h-[200px] w-[200px] left-0 justify-left items-left rotate-12"
-          src="/star_pixel_pink.svg"
-          alt="Decorative content"
-        />
+    <div className="flex justify-center bg-[#B69BFB] h-[2400px] md:h-[1000px]" id = "tracks">
+      <div className="invisible w-[100px] md:visible absolute opactiy-100 top-[2050px] h-[400px] w-[600px] left-[50px] justify-left items-left">
+      <img className="md:absolute h-[200px] w-[200px] left-0 justify-left items-left rotate-12" src="/star_pixel_pink.svg" alt="Decorative content"/>
       </div>
       <div className="invisible md:absolute opacity-100 top-[2600px] h-[400px] w-[600px] right-10 justify-right items-right invisible md:visible absolute opactiy-100 top-[2600px] h-[800px] w-[600px] right-0 justify-right items-right">
         <img
@@ -39,34 +32,14 @@ const Tracks = () => {
           Tracks
         </h1>
         <div className="relative flex flex-col top-[0px] gap-20 p-5 md:flex-row gap-20">
-          <CardComponent
-            title="Best Overall 🏆"
-            content="Awarded to the most outstanding hack that excels in creativity, functionality, and impact."
-            img="/best_overall.png"
-          />
-          <CardComponent
-            title="Best Beginner 🚀"
-            content="A special prize for first-time hackers who impress with their innovation and effort."
-            img="/best_beginner.png"
-          />
-          <CardComponent
-            title="Hacker’s Choice 🗳️"
-            content="Voted by fellow participants, this hack wins the community’s seal of approval."
-            img="/hackers_choice.png"
-          />
+        <CardComponent title="Best Overall 🏆" content="Awarded to the most outstanding hack that excels in creativity, functionality, and impact." img="/best_overall1.svg" />
+        <CardComponent title="Best Beginner 🚀" content="A special prize for first-time hackers who impress with their innovation and effort." img="/best_beginner1.svg" />
+        <CardComponent title="Hacker’s Choice 🗳️" content="Voted by fellow participants, this hack wins the community’s seal of approval." img="/hackers_choice1.svg" />
         </div>
 
         <div className="relative flex flex-col justify-center top-[100px] gap-20 p-5 md:flex-row gap-20">
-          <CardComponent
-            title="Medtronic Track 💙"
-            content="Sponsored by Medtronic, this prize goes to the best healthcare or medical innovation."
-            img="/medtronic.png"
-          />
-          <CardComponent
-            title="Meme Hack 😂"
-            content="The funniest, most creative, and internet-worthy hack takes home this prize."
-            img="/meme_hack.png"
-          />
+        <CardComponent title="Medtronic Track 💙" content="Sponsored by Medtronic, this prize goes to the best healthcare or medical innovation." img="/medtronic1.svg" />
+        <CardComponent title="Meme Hack 😂" content="The funniest, most creative, and internet-worthy hack takes home this prize." img="/meme_hack1.svg" />
         </div>
       </div>
     </div>
