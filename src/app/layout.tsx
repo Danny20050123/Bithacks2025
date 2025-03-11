@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import { Jersey_25, Rethink_Sans } from "next/font/google";
 // import { Cabin } from "next/font/google";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
       </head>
       <body className={`${rethink.variable} ${jersey.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
