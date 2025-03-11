@@ -23,7 +23,7 @@ const Faq = () => {
     {
       question: "When do applications close?",
       answer:
-        "Applications close March 21. Decision details will be released closer to the event.",
+        "Applications close Sunday, March 30, 2025 at 11:59 PM. Decision details will be released closer to the event.",
     },
     // {
     //   question: "What should I bring?",
