@@ -97,7 +97,7 @@ const Cards = () => {
     {
       name: "Elise Ji",
       position: "Logistics Committee",
-      image: "team-members/elise.jpg",
+      image: "team-members/elise.JPG",
       category: "Logistics",
       linkedin: "https://www.linkedin.com/in/elise-ji/",
     },
