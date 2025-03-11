@@ -97,7 +97,7 @@ const Cards = () => {
     {
       name: "Elise Ji",
       position: "Logistics Committee",
-      image: "team-members/elise.JPG",
+      image: "team-members/elise.jpg",
       category: "Logistics",
       linkedin: "https://www.linkedin.com/in/elise-ji/",
     },
@@ -111,7 +111,7 @@ const Cards = () => {
     {
       name: "Tiffany Zhang",
       position: "Logistics Committee",
-      image: "team-members/tiffany.jpg",
+      image: "team-members/tiffany.JPG",
       category: "Logistics",
       linkedin: "https://www.linkedin.com/in/tiffzhny/",
     },
