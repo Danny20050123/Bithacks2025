@@ -17,11 +17,11 @@ const CardComponent: React.FC<CardProps> = ({ title, content, img}) => {
             alt="Decorative content"
           />
         </div>
-        <div className="relative group w-[260px] h-[600px] top-[-240px] text-[#111] flex flex-col flex-end justify-end opacity-0 transition-[2s] duration-[ease-in-out] py-2.5 hover:visible opacity-100 mt-[30px]">
+        <div className="relative group w-[260px] h-[600px] top-[-300px] text-[#111] flex flex-col flex-end justify-end opacity-0 transition-[2s] duration-[ease-in-out] py-2.5 hover:visible opacity-100 mt-[30px]">
           <div className="flex group justify-center opacity-0 transition-[2s] duration-[ease-in-out] py-2.5 group-hover:opacity-100">
           <h1 className="relative flex w-[200px] h-[300px] text-[30px] items-center text-center justify-center font-rethink top-[-150px] z-[10] group-hover:opacity-100">{title}</h1>
           </div>
-          <div className="relative top-[-100px] flex opacity-0 justify-center transition-[2s] duration-[ease-in-out] py-2.5 group-hover:opacity-100">
+          <div className="relative top-[-160px] flex opacity-0 justify-center transition-[2s] duration-[ease-in-out] py-2.5 group-hover:opacity-100">
           <p className="relative text-[20px] text-center font-rethink top-[-150px] z-[10] text-[#333] mt-2.5">
             {content}
           </p>
