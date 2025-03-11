@@ -12,9 +12,7 @@ type Member = {
 };
 
 const Cards = () => {
-  const defaultImageLink: string =
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1200px-Unknown_person.jpg";
-
+  
   const teamMembers: Member[] = [
     {
       name: "Neel Ramesh",

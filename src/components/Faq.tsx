@@ -5,11 +5,6 @@ import { ChevronDown } from "lucide-react";
 const Faq = () => {
   const [openFaqs, setOpenFaqs] = useState<number[]>([]);
 
-  type FaqItem = {
-    question: string;
-    answer: React.ReactNode;
-  };
-
   const faqData = [
     {
       question: "What is BitHacks?",

@@ -11,7 +11,7 @@ const Landing = () => {
             BitHacks
           </p>
           <p className="font-rethink text-center text-lg px-[2.25rem] md:text-left md:text-xl md:pl-1">
-            UCI's first Embedded Systems hackathon
+            UCI&apos;s first Embedded Systems hackathon
           </p>
         </div>
         <div className="font-rethink flex-col items-center md-items-left md:flex-row md:justify-left gap-3.5 flex">
