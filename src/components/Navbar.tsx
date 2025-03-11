@@ -52,7 +52,7 @@ const Navbar = () => {
             />
           </motion.div>
 
-          <div className="md:flex md:gap-8 md:justify-end md:w-fit max-md:hidden text-white">
+          <div className="font-rethink md:flex md:gap-8 md:justify-end md:w-fit max-md:hidden text-white">
             {["about", "tracks", "faq", "sponsors", "team"].map((id) => (
               <button key={id} onClick={() => scrollToSection(id)}>
                 {id.charAt(0).toUpperCase() + id.slice(1)}
@@ -75,7 +75,7 @@ const Navbar = () => {
                 }}
                 className="fixed z-10 top-20 right-10 md:hidden"
               >
-                <ul className="z-10 bg-[#4E55CD] text-white drop-shadow-lg rounded-lg flex flex-col text-right px-8 py-4 w-fit gap-8">
+                <ul className="font-rethink z-10 bg-[#4E55CD] text-white drop-shadow-lg rounded-lg flex flex-col text-right px-8 py-4 w-fit gap-8">
                   {["about", "tracks", "faq", "sponsors", "team"].map((id) => (
                     <button key={id} onClick={() => scrollToSection(id)}>
                       {id.charAt(0).toUpperCase() + id.slice(1)}
