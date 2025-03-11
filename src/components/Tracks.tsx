@@ -20,7 +20,7 @@ const Tracks = () => {
           alt="Decorative content"
         />
       </div>
-      <div className="invisible w-[0px] h-[0px] md:visible md:absolute md:opacity-100 md:top-[2300px] md:h-[400px] md:w-[400px] md:left-0 md:justify-left md:items-left">
+      <div className="invisible w-[0px] h-[0px] md:visible md:absolute md:opacity-100 md:top-[2300px] md:h-[400px] md:w-[600px] md:left-0 md:justify-left md:items-left">
         <img
           className="md:absolute h-[400px] w-[600px] left-0 justify-left items-left [transform:rotateY(180deg)]"
           src="https://s3-alpha-sig.figma.com/img/ca70/c85b/5eb3587c8a062897708a9158999634a9?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Y0cK16tfDh-KuhEZVI7u-iUdwhC0FfpD2Dve0h4ZgW3c1k~tUhADeOXO7RwJGKC~DeHOrnjHFbaXY-c6sUCZMhIaeaEOdJd6IIm9hQRFtAHDnkDfXVh-rxdrQLckLWqq7GutQdoxJuAm7fROLMOuMPIdQw6Z4v5hp5-ABdqlT6R5zT1snWpAPFPG8qoUgXsKvTSxTJEfc-2wAyz5ajOZceiLzAEymRV01x2VkS3vEZN1WbQoq5b2MZgE6N1jOUJhHTtGBL2HRYryz2Z3v6AYwKsO9GYTle0FeJf4Fpe8gEA5tZHbHAsbRNyX3j~xbWWJfOu5MIBwOq939Rf9aACeqw__"
