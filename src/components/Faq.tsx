@@ -216,11 +216,11 @@ const Faq = () => {
       </div>
 
       {/* Anteater Kick Graphic */}
-      <div className="absolute -bottom-[3180px] -right-[29px] w-[665px] h-[665px] hidden lg:block overflow-hidden">
+      <div className="absolute -bottom-[3180px] right-[28px] w-[665px] h-[665px] -mr-6 hidden lg:block overflow-hidden">
         <img
           src="/kick_character.PNG"
           alt="Anteater kicking"
-          className="w-full h-full object-contain translate-x-1/4"
+          className="w-full h-full object-contain translate-x-[30%]"
         />
       </div>
 
