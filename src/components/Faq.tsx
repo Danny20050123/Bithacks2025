@@ -109,7 +109,11 @@ const Faq = () => {
       link: "https://oai.tech.uci.edu",
       imageUrl: "/inclusion-oai.png",
     },
-    // { name: "Test8", link: "https://test8.com", imageUrl: "/api/placeholder/150/150" }
+    { 
+      name: "ASUCI SPFB", 
+      link: "https://asuci.uci.edu/president/spfb/", 
+      imageUrl: "/SPFB.png"
+    }
   ];
 
   const toggleFaq = (index: number) => {
@@ -212,7 +216,7 @@ const Faq = () => {
       </div>
 
       {/* Anteater Kick Graphic */}
-      <div className="absolute -bottom-20 -right-0 w-[40rem] h-[30rem] -mb-20 mr-0 hidden lg:block overflow-hidden">
+      <div className="absolute -bottom-[3180px] -right-[29px] w-[665px] h-[665px] hidden lg:block overflow-hidden">
         <img
           src="/kick_character.PNG"
           alt="Anteater kicking"
@@ -220,7 +224,7 @@ const Faq = () => {
         />
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
         {sponsorData.map((sponsor, index) => (
           <div
             key={index}
@@ -234,7 +238,7 @@ const Faq = () => {
             {/* Hover overlay w/animation */}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-white text-xl font-semibold mb-2">
+                <p className="text-white text-lg font-semibold mb-2">
                   {sponsor.name}
                 </p>
                 <a
