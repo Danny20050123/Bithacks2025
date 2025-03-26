@@ -37,7 +37,7 @@ const Navbar = () => {
             </motion.div>
           </button>
           <motion.div
-            className="md:hidden"
+            className="fixed top-6 right-[120px] md:hidden"
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               setNavbarOpen(!navbarOpen);
@@ -52,13 +52,14 @@ const Navbar = () => {
             />
           </motion.div>
 
-          <div className="font-rethink md:flex md:gap-8 md:justify-end md:w-fit max-md:hidden text-white">
+          <div className="font-rethink md:flex md:gap-8 md:justify-end md:w-fit max-md:hidden text-white md:mr-[150px]">
             {["about", "tracks", "faq", "sponsors", "team"].map((id) => (
               <button key={id} onClick={() => scrollToSection(id)}>
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
             ))}
           </div>
+
         </nav>
 
         <div>

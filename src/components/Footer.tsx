@@ -61,12 +61,19 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div
-        className="text-center text-md font-jersey"
-        style={{ color: "#322FAC" }}
-      >
-        &copy; 2025 BitHacks • Made with 👾 and 💜 from BitHacks
+      <div className="text-center text-md font-jersey" style={{ color: "#322FAC" }}>
+      <div>
+        <a
+          href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "underline" }}
+        >
+          MLH Code of Conduct
+        </a>
       </div>
+      &copy; 2025 BitHacks • Made with 👾 and 💜 from BitHacks
+    </div>
     </footer>
   );
 };
