@@ -102,12 +102,17 @@ const Faq = () => {
     {
       name: "UCI OAI",
       link: "https://oai.tech.uci.edu",
-      imageUrl: "/inclusion-oai.png",
+      imageUrl: "/oai_logo_3.png",
     },
     { 
       name: "ASUCI SPFB", 
       link: "https://asuci.uci.edu/president/spfb/", 
       imageUrl: "/SPFB.png"
+    },
+    { 
+      name: "UCI OEL", 
+      link: "https://oel.eng.uci.edu/", 
+      imageUrl: "/oel.png"
     }
   ];
 
@@ -219,7 +224,7 @@ const Faq = () => {
         />
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto">
         {sponsorData.map((sponsor, index) => (
           <div
             key={index}
@@ -249,6 +254,7 @@ const Faq = () => {
           </div>
         ))}
       </div>
+
       {/* Mobile Star Graphic */}
       <div className="sm:hidden mt-12 w-full flex justify-center">
         <div className="w-[7rem] h-[7rem]">
