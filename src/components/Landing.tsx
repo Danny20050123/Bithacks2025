@@ -19,22 +19,10 @@ const Landing = () => {
             whileHover={{ scale: 1.2, backgroundColor: "#8BDCFE" }}
             whileTap={{ scale: 0.9 }}
             className="bg-[#A6EFFF] rounded-full text-xl md:text-sm py-2 px-24 md:px-4 md:py-1.5 w-fit"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdT3rTJIAAeaHsOPRIgOMsE9l8p7ghiLCNUhshDlFkHNLix2Q/viewform?usp=sharing"
+            href="https://bithacks-24809.devpost.com/?_gl=1*4kv348*_gcl_au*MTE5NDc3NTE5Ny4xNzQzNjE3NDIz*_ga*NDU1NTQ4NDAuMTczNTQyNTcyNQ..*_ga_0YHJK3Y10M*MTc0NDMxMTA0OC4yOC4xLjE3NDQzMTEyMjguMC4wLjA."
             target="_blank"
           >
-            Hacker
-          </motion.a>
-          <motion.a
-            whileHover={{
-              scale: 1.2,
-              backgroundColor: "#C9A4FF",
-            }}
-            whileTap={{ scale: 0.9 }}
-            className="bg-[#E3C4FF] rounded-full text-xl py-2 px-24 md:text-sm md:px-4 md:py-1.5 w-fit"
-            href="https://forms.gle/2QB1acCUP5RmfnEf6"
-            target="_blank"
-          >
-            Mentor
+            Devpost & Schedule
           </motion.a>
         </div>
         <div className="h-0, w-0 md: ">
