@@ -49,7 +49,7 @@ const Faq = () => {
     {
       question: "Can I bring my own parts to use?",
       answer:
-        "Feel free to bring your own parts as long as they are under $50.",
+        "Feel free to bring your own parts as long as they are under $75.",
     },
     {
       question: "What is the schedule like?",
