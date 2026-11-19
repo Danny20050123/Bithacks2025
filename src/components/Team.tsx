@@ -16,96 +16,21 @@ type Member = {
 const Cards = () => {
   
   const teamMembers: Member[] = [
-    {
-      name: "Neel Ramesh",
-      position: "Director",
-      category: "Other",
-    },
-    {
-      name: "Wilson Nguyen",
-      position: "Director",
-      category: "Other",
-    },
-    {
-      name: "Shana Chao",
-      position: "Director",
-      category: "Other",
-    },
-    {
-      name: "Daniel Li",
-      position: "Tech Lead",
-      category: "Tech",
-    },
-    {
-      name: "Arnav Pandey",
-      position: "Logistics Director",
-      category: "Logistics",
-    },
-    {
-      name: "German Cervantes",
-      position: "Workshop and Logistics Committee",
-      category: ["Tech", "Logistics"],
-    },
-    {
-      name: "Jonathan Lin",
-      position: "Workshop Committee",
-      category: "Tech",
-    },
-    {
-      name: "Alan Tran",
-      position: "Logistics Committee",
-      category: "Logistics",
-    },
-    {
-      name: "Elise Ji",
-      position: "Logistics Committee",
-      category: "Logistics",
-    },
-    {
-      name: "Duy Tran",
-      position: "Logistics Committee",
-      category: "Logistics",
-    },
-    {
-      name: "Tiffany Zhang",
-      position: "Logistics Committee",
-      category: "Logistics",
-    },
-    {
-      name: "Luis Ortiz",
-      position: "Workshop Committee",
-      category: "Tech",
-    },
-    {
-      name: "Leo Chavez",
-      position: "Workshop Committee",
-      category: "Tech",
-    },
-    {
-      name: "Anthony Tam",
-      position: "Web Developer",
-      category: "Tech",
-    },
-    {
-      name: "Julia Nguyen",
-      position: "Web Developer",
-      category: "Tech",
-    },
-    {
-      name: "Siddharth Sundar",
-      position: "Web Developer",
-      category: "Tech",
-    },
-    {
-      name: "Arianna Sotudeh",
-      position: "Logistics Committee",
-      category: "Logistics",
-    },
-    {
-      name: "Dhivyesh Kanagasabai",
-      position: "Web Developer",
-      category: "Tech",
-    }
+    // Directors/Leads (position must contain "Director" or "Lead" to show in that tab)
+    { name: "Arnav Pandey", position: "Director", category: "Other" },
+    { name: "Kevin Chhim", position: "Director", category: "Other" },
+    { name: "Sahil Dhaktode", position: "Director", category: "Other" },
+    { name: "Enoch Jin", position: "Director", category: "Other" },
+
+    // Placeholders: replace with real members as the team fills out.
+    { name: "Coming Soon", position: "Logistics Team", category: "Logistics" },
+    { name: "Coming Soon", position: "Logistics Team", category: "Logistics" },
+    { name: "Coming Soon", position: "Logistics Team", category: "Logistics" },
+    { name: "Coming Soon", position: "Logistics Team", category: "Logistics" },
+    { name: "Coming Soon", position: "Tech Team", category: "Tech" },
+    { name: "Coming Soon", position: "Tech Team", category: "Tech" },
+    { name: "Coming Soon", position: "Tech Team", category: "Tech" },
+    { name: "Coming Soon", position: "Tech Team", category: "Tech" },
   ];
 
   const [filter, setFilter] = useState<string>("Directors/Leads");
