@@ -72,7 +72,7 @@ const Footer = () => {
           MLH Code of Conduct
         </a>
       </div>
-      &copy; 2025 BitHacks • Made with 👾 and 💜 from BitHacks
+      &copy; 2027 BitHacks • Made with 👾 and 💜 from BitHacks
     </div>
     </footer>
   );

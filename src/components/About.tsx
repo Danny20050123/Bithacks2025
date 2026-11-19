@@ -10,31 +10,34 @@ const About = () => {
       const target = document.getElementById("prizes");
 
       if (!target) return;
-      new TypeIt("#prizes", {
+      // Edit these to change the rotating prize text.
+      const headline = "$3000+ in Prize Money";
+      const prefix = "Prizes include: ";
+      const prizes = [
+        "Bambu Lab A1 Mini 3D Printers",
+        "Weller Soldering Stations",
+        "JBL Flip 6 Speakers",
+      ];
+
+      const typer = new TypeIt("#prizes", {
         speed: 30,
         waitUntilVisible: true,
         loop: true,
       })
-        .type("$6000+ in Prizes")
+        .type(headline)
         .pause(1000)
-        .delete(20)
+        .delete(headline.length)
         .pause(1000)
-        .type("Prizes include: Sony PlayStation 5s")
-        .pause(1000)
-        .delete(19)
-        .pause(1000)
-        .type("Nintendo Switch Lites")
-        .pause(1000)
-        .delete(21)
-        .pause(1000)
-        .type("JBL Flip 5 speakers for Fetty Wap")
-        .pause(1000)
-        .delete(33)
-        .pause(1000)
-        .type("Lego Sets and More!")
-        .pause(1000)
-        .delete(200)
-        .go();
+        .type(prefix);
+
+      prizes.forEach((prize, i) => {
+        typer.type(prize).pause(1000);
+        // Keep "Prizes include: " on screen between items; clear everything after the last one.
+        typer.delete(i === prizes.length - 1 ? prefix.length + prize.length : prize.length);
+        typer.pause(1000);
+      });
+
+      typer.go();
     }
   }, []);
 
@@ -79,10 +82,10 @@ const About = () => {
           <AboutCard />
           <div className="bg-[#6c81e6]/65 text-white mt-8 p-8 w-[20rem] md:w-[32rem] rounded-lg">
             <p className="md:text-xl">
-              April 11-13 • Doheny Beach Student Center
+              April 9-11 • Doheny Beach Student Center
             </p>
             <p className="text-4xl md:text-5xl">36 Hours</p>
-            <p id="prizes" className="h-[10rem] text-4xl md:text-5xl pb-4"></p>
+            <p id="prizes" className="h-[12rem] md:h-[10rem] text-4xl md:text-5xl pb-4"></p>
             {/* Sponsor Button */}
             {/* <motion.button
           whileHover={{ scale: 1.2, backgroundColor: "#724CF1" }}

@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
+// image and linkedin are optional: members without them get a placeholder tile and no link.
+// To add a photo, put it in public/team-members/ and set image: "team-members/<file>".
 type Member = {
   name: string;
   position: string;
-  image: string;
+  image?: string;
   category: string | string[];
-  linkedin: string;
+  linkedin?: string;
 };
 
 const Cards = () => {
@@ -17,159 +19,92 @@ const Cards = () => {
     {
       name: "Neel Ramesh",
       position: "Director",
-      image: "team-members/neel.jpeg",
       category: "Other",
-      linkedin: "https://www.linkedin.com/in/neel-ramesh-5b2395222/",
     },
     {
       name: "Wilson Nguyen",
       position: "Director",
-      image: "team-members/wilson.jpg",
       category: "Other",
-      linkedin: "https://www.linkedin.com/in/wilsonng17/",
     },
     {
       name: "Shana Chao",
       position: "Director",
-      image: "team-members/shana.jpg",
       category: "Other",
-      linkedin:
-        "https://www.linkedin.com/in/shanachao?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app ",
-    },
-    {
-      name: "Donovan Chen",
-      position: "Outreach Lead",
-      image: "team-members/donovan.jpeg",
-      category: "Outreach",
-      linkedin: "https://www.linkedin.com/in/donovanachen/",
     },
     {
       name: "Daniel Li",
       position: "Tech Lead",
-      image: "team-members/daniel.jpg",
       category: "Tech",
-      linkedin: "https://www.linkedin.com/in/ningyuan-li/",
     },
     {
       name: "Arnav Pandey",
       position: "Logistics Director",
-      image: "team-members/arnav.jpg",
       category: "Logistics",
-      linkedin:
-        "https://www.linkedin.com/in/arnav-pandey-985280227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "German Cervantes",
       position: "Workshop and Logistics Committee",
-      image: "team-members/german.jpg",
       category: ["Tech", "Logistics"],
-      linkedin: "https://www.LinkedIn.com/in/germancerv/",
     },
     {
       name: "Jonathan Lin",
       position: "Workshop Committee",
-      image: "team-members/jonathan.jpg",
       category: "Tech",
-      linkedin: "https://www.linkedin.com/in/linjonathan001/",
-    },
-    {
-      name: "Vanessa Shimizu",
-      position: "Outreach and Graphics Committee",
-      image: "team-members/vanessa.jpg",
-      category: "Outreach",
-      linkedin: "https://www.linkedin.com/in/vanessa-shimizu-/",
-    },
-    {
-      name: "Angie Xetey",
-      position: "Graphics and Marketing Committee",
-      image: "team-members/angie.jpg",
-      category: "Outreach",
-      linkedin:
-        "https://www.linkedin.com/in/angie-xetey/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "Alan Tran",
       position: "Logistics Committee",
-      image: "team-members/alan.jpg",
       category: "Logistics",
-      linkedin: "https://www.linkedin.com/in/alantran296",
     },
     {
       name: "Elise Ji",
       position: "Logistics Committee",
-      image: "team-members/elise.jpg",
       category: "Logistics",
-      linkedin: "https://www.linkedin.com/in/elise-ji/",
     },
     {
       name: "Duy Tran",
       position: "Logistics Committee",
-      image: "team-members/duy.jpg",
       category: "Logistics",
-      linkedin: "https://www.linkedin.com/in/duytran1212",
     },
     {
       name: "Tiffany Zhang",
       position: "Logistics Committee",
-      image: "team-members/tiffany.JPG",
       category: "Logistics",
-      linkedin: "https://www.linkedin.com/in/tiffzhny/",
     },
     {
       name: "Luis Ortiz",
       position: "Workshop Committee",
-      image: "team-members/luis.jpeg",
       category: "Tech",
-      linkedin: "https://www.linkedin.com/in/luis-ortiz-ramirez-312307337",
     },
     {
       name: "Leo Chavez",
       position: "Workshop Committee",
-      image: "team-members/leo.jpg",
       category: "Tech",
-      linkedin: "https://www.linkedin.com",
     },
     {
       name: "Anthony Tam",
       position: "Web Developer",
-      image: "team-members/anthony.png",
       category: "Tech",
-      linkedin: "https://www.linkedin.com/in/-anthonytam/",
     },
     {
       name: "Julia Nguyen",
       position: "Web Developer",
-      image: "team-members/julia.jpeg",
       category: "Tech",
-      linkedin: "https://www.linkedin.com/in/julia-t-nguyen",
     },
     {
       name: "Siddharth Sundar",
       position: "Web Developer",
-      image: "team-members/siddharth.jpg",
       category: "Tech",
-      linkedin: "https://www.linkedin.com/in/siddharthsundar/",
-    },
-    {
-      name: "Steven Doan",
-      position: "Marketing Committee",
-      image: "team-members/steven.jpg",
-      category: "Outreach",
-      linkedin: "https://linkedin.com/in/stevdn",
     },
     {
       name: "Arianna Sotudeh",
       position: "Logistics Committee",
-      image: "team-members/arianna.jpg",
       category: "Logistics",
-      linkedin: "https://www.linkedin.com/in/arianna-sotudeh-610a63237/"
     },
     {
       name: "Dhivyesh Kanagasabai",
       position: "Web Developer",
-      image: "team-members/dhivyesh.jpg",
       category: "Tech",
-      linkedin: "https://www.linkedin.com"
     }
   ];
 
@@ -207,7 +142,7 @@ const Cards = () => {
   return (
     <div className="px-4">
       <div className="flex flex-wrap gap-2 mb-8 justify-center">
-        {["Directors/Leads", "Logistics", "Outreach", "Tech"].map((option) => (
+        {["Directors/Leads", "Logistics", "Tech"].map((option) => (
           <button
             key={option}
             onClick={() => setFilter(option)}
@@ -222,24 +157,40 @@ const Cards = () => {
         <div className="col-span-full flex flex-wrap justify-center gap-6">
           {filteredMembers.map((member, index) => (
             <div key={index} className="w-[275px]">
-            <div className="relative group rounded-lg overflow-hidden h-80">
-              <Image
-                src={`/${member.image}`}
-                alt={member.name}
-                fill
-                className="object-cover object-center transition-transform duration-300 group-hover:scale-110"
-                sizes="(max-width: 1000px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300"></div>
-              <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300">
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkIcon />
-                </a>
-              </div>
+            <div className="relative group rounded-lg overflow-hidden h-80 bg-[#E3C4FF]">
+              {member.image ? (
+                <Image
+                  src={`/${member.image}`}
+                  alt={member.name}
+                  fill
+                  className="object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 1000px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src="/bithacks_logo_black.svg"
+                    alt=""
+                    width={120}
+                    height={120}
+                    className="opacity-40"
+                  />
+                </div>
+              )}
+              {member.linkedin && (
+                <>
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300"></div>
+                  <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <LinkIcon />
+                    </a>
+                  </div>
+                </>
+              )}
             </div>
             <div className="mt-4 text-center">
               <h3

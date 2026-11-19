@@ -11,16 +11,17 @@ const Landing = () => {
             BitHacks
           </p>
           <p className="font-rethink text-center text-lg px-[2.25rem] md:text-left md:text-xl md:pl-1">
-            UCI&apos;s first Embedded Systems hackathon
+            UCI&apos;s Embedded Systems hackathon
           </p>
         </div>
         <div className="font-rethink flex-col items-center md-items-left md:flex-row md:justify-left gap-3.5 flex">
+          {/* Devpost link disabled until the new Devpost is ready.
+              To re-enable: add href="<devpost url>" and target="_blank". */}
           <motion.a
             whileHover={{ scale: 1.2, backgroundColor: "#8BDCFE" }}
             whileTap={{ scale: 0.9 }}
-            className="bg-[#A6EFFF] rounded-full text-xl md:text-sm py-2 px-24 md:px-4 md:py-1.5 w-fit"
-            href="https://bithacks-24809.devpost.com/?_gl=1*4kv348*_gcl_au*MTE5NDc3NTE5Ny4xNzQzNjE3NDIz*_ga*NDU1NTQ4NDAuMTczNTQyNTcyNQ..*_ga_0YHJK3Y10M*MTc0NDMxMTA0OC4yOC4xLjE3NDQzMTEyMjguMC4wLjA."
-            target="_blank"
+            className="bg-[#A6EFFF] rounded-full text-xl md:text-sm py-2 px-24 md:px-4 md:py-1.5 w-fit cursor-default"
+            title="Coming soon"
           >
             Devpost & Schedule
           </motion.a>
