@@ -18,8 +18,9 @@ const jersey = Jersey_25({
 });
 
 export const metadata: Metadata = {
-  title: "BitHacks UCI 2025",
-  description: "BitHacks UCI 2025",
+  title: "BitHacks UCI 2027",
+  description:
+    "BitHacks is UCI's Embedded Systems hackathon: 36 hours of building hardware projects, April 9-11 at the Doheny Beach Student Center.",
   icons: {
     icon: "bithacks_logo_black.svg",
   },
@@ -43,7 +44,9 @@ export default function RootLayout({
       <body className={`${rethink.variable} ${jersey.variable} antialiased`}>
         {children}
         <Analytics />
-        <a
+        {/* MLH badge link disabled until the new MLH season is confirmed.
+            Re-add href / target / rel (and update the season in the URL + image) then. */}
+        <div
           id="mlh-trust-badge"
           style={{
             display: "block",
@@ -55,15 +58,12 @@ export default function RootLayout({
             width: "10%",
             zIndex: 10000,
           }}
-          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=blue"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <img
             src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-blue.svg"
-            alt="Major League Hacking 2025 Trust Badge"
+            alt="Major League Hacking Trust Badge"
           />
-        </a>
+        </div>
 
       </body>
     </html>

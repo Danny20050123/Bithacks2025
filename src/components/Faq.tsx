@@ -1,120 +1,28 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const Faq = () => {
   const [openFaqs, setOpenFaqs] = useState<number[]>([]);
 
-  const faqData = [
-    {
-      question: "What is BitHacks?",
-      answer:
-        "BitHacks is an event by IEEE and Theta Tau where hackers collaborate and compete to create the most innovative embedded projects within a weekend.",
-    },
-    {
-      question: "Who can participate in BitHacks?",
-      answer:
-        "Any college student can apply to participate in BitHacks. We welcome hackers of all skill levels, no prior coding or embedded experience is needed.",
-    },
-    // {
-    //   question: "Do I need to know how to code or work with embedded software?",
-    //   answer: "No coding experience is needed, we welcome beginners and provide mentors to help you learn."
-    // },
-    {
-      question: "When do applications close?",
-      answer:
-        "Applications close Wednesday, April 2, 2025 at 11:59 PM. Decision details will be released closer to the event.",
-    },
-    // {
-    //   question: "What should I bring?",
-    //   answer: "Bring your laptop, charger, a form of ID, and any personal items you'll need for the duration of the event."
-    // },
-    {
-      question: "What parts will be provided to use?",
-      answer: (
-        <>
-          Here is a{" "}
-          <a
-            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQUZ75eky0jHpDp_vapfN2ATBrxrkZ5mY5WN1bJKSkdKcVwsXL1uxg0MRQaQDway5Vtx2UjyzXWsiAt/pubhtml"
-            className="text-blue-600 hover:text-blue-800 underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            list
-          </a>{" "}
-          for all the parts that will be provided!
-        </>
-      ),
-    },
-    {
-      question: "Can I bring my own parts to use?",
-      answer:
-        "Feel free to bring your own parts as long as they are under $75.",
-    },
-    {
-      question: "What is the schedule like?",
-      answer:
-        "Check-in ends at 7 PM on April 11 and hacking will conclude on Sunday, April 13 at 9 AM.",
-    },
-    {
-      question: "Will transportation be provided?",
-      answer:
-        "No, transportation will need to be taken care of by individual hackers. Unfortunately we can't provide any travel reimbursements.",
-    },
-    {
-      question: "What if I don't have a team?",
-      answer:
-        "There will be a team-building event before the start of BitHacks!",
-    },
+  // Answers are placeholders for now. Replace COMING_SOON with the real answer text when ready.
+  const COMING_SOON = "Answer coming soon!";
+  const faqData: { question: string; answer: React.ReactNode }[] = [
+    { question: "What is BitHacks?", answer: COMING_SOON },
+    { question: "Who can participate in BitHacks?", answer: COMING_SOON },
+    { question: "When do applications close?", answer: COMING_SOON },
+    { question: "What parts will be provided to use?", answer: COMING_SOON },
+    { question: "Can I bring my own parts to use?", answer: COMING_SOON },
+    { question: "What is the schedule like?", answer: COMING_SOON },
+    { question: "Will transportation be provided?", answer: COMING_SOON },
+    { question: "What if I don't have a team?", answer: COMING_SOON },
   ];
 
-  const sponsorData = [
-    {
-      name: "IEEE-Eta Kappa Nu",
-      link: "https://hkn.ieee.org/",
-      imageUrl: "/IEEE-EKN.png",
-    },
-    {
-      name: "Medtronic",
-      link: "https://www.medtronic.com/",
-      imageUrl: "/medtronic-3.svg",
-    },
-    {
-      name: "Northrop Grumman",
-      link: "https://www.northropgrumman.com/",
-      imageUrl: "/NorthropGrumman.svg",
-    },
-    {
-      name: "UCI MECPS",
-      link: "https://mecps.uci.edu/",
-      imageUrl: "/MECPS.png",
-    },
-    {
-      name: "UCI Samueli School of Engineering",
-      link: "https://engineering.uci.edu/",
-      imageUrl: "/samueli.png",
-    },
-    {
-      name: "UCI ODIT",
-      link: "https://odit.uci.edu",
-      imageUrl: "/ODITLogoTransparent.png",
-    },
-    {
-      name: "UCI OAI",
-      link: "https://oai.tech.uci.edu",
-      imageUrl: "/oai_logo_3.png",
-    },
-    { 
-      name: "ASUCI SPFB", 
-      link: "https://asuci.uci.edu/president/spfb/", 
-      imageUrl: "/SPFB.png"
-    },
-    { 
-      name: "UCI OEL", 
-      link: "https://oel.eng.uci.edu/", 
-      imageUrl: "/oel.png"
-    }
-  ];
+  // Add sponsors here as they come in, e.g.
+  // { name: "Company", link: "https://company.com", imageUrl: "/company-logo.png" },
+  // Until there are any, three blank "Coming soon" tiles are shown.
+  const sponsorData: { name: string; link: string; imageUrl: string }[] = [];
+  const placeholderCount = 3;
 
   const toggleFaq = (index: number) => {
     setOpenFaqs((prev) =>
@@ -225,6 +133,17 @@ const Faq = () => {
       </div>
 
       <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto">
+        {sponsorData.length === 0 &&
+          Array.from({ length: placeholderCount }).map((_, index) => (
+            <div
+              key={`placeholder-${index}`}
+              className="aspect-square bg-white rounded-lg shadow-md p-4 flex items-center justify-center"
+            >
+              <p className="font-rethink text-[#332FAC]/60 text-sm md:text-lg text-center">
+                Coming soon
+              </p>
+            </div>
+          ))}
         {sponsorData.map((sponsor, index) => (
           <div
             key={index}
